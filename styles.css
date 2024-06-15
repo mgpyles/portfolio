@@ -1,0 +1,89 @@
+﻿@font-face {
+    font-family: Poppins Black;
+    src: url(fonts/poppins.black.ttf);
+}
+@font-face {
+    font-family: Varela Round;
+    src: url(fonts/VarelaRound-Regular.ttf);
+}
+@font-face {
+    font-family: Crimson;
+    src: url(fonts/Crimson-Roman.ttf);
+}
+@font-face {
+    font-family: Plaster;
+    src: url(fonts/Plaster-Regular.ttf);
+}
+
+@font-face {
+    font-family: Shippori Mincho;
+    src: url(fonts/ShipporiMincho-Regular.ttf);
+}
+
+@font-face {
+    font-family: Shippori Mincho Bold;
+    src: url(fonts/ShipporiMincho-Bold.ttf);
+}
+
+form{
+    font-family:Crimson, Consolas;
+}
+.msg {
+    color: #0DED8E;
+    font-family:'Varela Round', 'Lucida Sans';
+}
+.hidden {
+    opacity: 0;
+}
+
+a{
+    text-decoration:none;
+}
+.hover:hover {
+    border: 1px solid white;
+    box-shadow: 2px 2px;
+    text-decoration:none;
+}
+.hover:visited {
+    border: 1px solid white;
+    box-shadow: 2px 2px;
+}
+.myButton {
+    background-color: #1F1521;
+    width: 15px;
+    height: 15px;
+}
+
+/* class styles */
+.plaster {
+    font-family: Plaster, Impact;
+}
+
+.accent {
+    color: #FF98F2;
+}
+
+.mainTitle{
+    font-size:128px;
+}
+.center{
+    text-align:center;
+}
+.space-above{
+    margin-top:1.5em;
+}
+.neutral {
+    color: #51424E;
+}
+.shipporimincho-regular {
+    font-family: Shippori Mincho, Constantia;
+}
+.shipporimincho-bold {
+    font-family: Shippori Mincho Bold;
+}
+.nav-menu{
+    font-size:24px;
+}
+.headingtwo{
+    font-size:48px;
+}
