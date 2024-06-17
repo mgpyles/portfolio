@@ -75,6 +75,9 @@ a{
 .neutral {
     color: #51424E;
 }
+.neutral-bg {
+    background-color: #51424E;
+}
 .shipporimincho-regular {
     font-family: Shippori Mincho, Constantia;
 }
@@ -85,5 +88,8 @@ a{
     font-size:24px;
 }
 .headingtwo{
-    font-size:48px;
+    font-size:32px;
+}
+.active {
+    color: #A7469D;
 }
