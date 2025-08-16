@@ -108,6 +108,13 @@
                 margin:auto;
                 
             }
+
+            #portfolio-container{
+                width:75%;
+                display:block;
+                margin:auto;
+                margin-top:1.5em;
+            }
         }
 
         @media only screen and (max-width: 768px) {
@@ -204,7 +211,7 @@
         <div class="d-flex justify-content-center">
             <ul class="nav justify-content-center">
                 <li class="nav-item nav-menu">
-                    <button id="work" onClick="initPage(this.id)" class="nav-link neutral shipporimincho-bold">Work</button>
+                    <button id="work" onClick="initPage(this.id)" class="nav-link neutral shipporimincho-bold">Portfolio</button>
                     <!-- <a class="nav-link neutral shipporimincho-bold" href="#work">Work</a> -->
                 </li>
                 <li class="nav-border" style="border-right: 2px solid #51424E;"></li>
@@ -231,7 +238,7 @@
         <div class="d-flex justify-content-end" style="margin:1em 1em 0 0;">
             <ul class="nav justify-content-center">
                 <li class="nav-item nav-menu">
-                    <button id="work-1" onclick="nextPage(this.id)" class="nav-link neutral shipporimincho-bold">Work</button>
+                    <button id="work-1" onclick="nextPage(this.id)" class="nav-link neutral shipporimincho-bold">Portfolio</button>
                     <!-- <a class="nav-link neutral shipporimincho-bold" href="#work">Work</a> -->
                 </li>
                 <li class="nav-border" style="border-right: 2px solid #51424E;"></li>
@@ -250,7 +257,40 @@
 
 
     <div id="work-page" class="container-fluid hide space-above">
-        <h2 class="plaster neutral" style="font-size:48px;">Work</h2>
+        <h2 class="plaster neutral center" style="font-size:48px;">Portfolio</h2>
+            <div id="portfolio-container" class="container-fluid space-above">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-100" style="border: 4px solid #51424E;padding:1em;">
+                            <img src="imgs/flyer-mockup.jpg" class="card-img-top" alt="Mockup photo of a flyer designed in Figma.">
+                            <div class="card-body">
+                                <h5 class="card-title">Flyer Mockup</h5>
+                                <p class="card-text">This is a redesign of a flyer I had made previously for my client's club at Indiana University.</p>
+                                <button class="btn btn-primary neutral-bg">READ MORE</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100" style="border: 4px solid #51424E;padding:1em;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Whitney's Wings Redesign</h5>
+                                <p class="card-text">I was a senior in high school when I took on this project which unfortunately, I never finished due to the pandemic so this is a rework to fit my current abilities and skillset.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100" style="border: 4px solid #51424E;padding:1em;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Realtor Website Mockup</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
     </div>
     <div id="resume-page" class="container-fluid hide space-above">
         <div class="mobile-view">
@@ -263,6 +303,7 @@
                 <ul class="shipporimincho-bold neutral" style="list-style-type:none;margin:.5em 0 0 0;padding:0;">
                     <li style="margin-bottom:5px;"><i class="fa fa-user"></i> Miranda Pyles</li>
                     <li style="margin-bottom:5px;"><i class="fa fa-briefcase"></i> Frontend Web Developer</li>
+                    <li style="margin-bottom:5px;"><i class="fa fa-map"></i> Based in Dallas, TX</li>
                     <li><i class="fa fa-envelope"></i> mpyles2013@gmail.com</li>
                 </ul>
                 <h3 class="shipporimincho-bold neutral" style="margin-top:.5em;">Skills/Softwares</h3>
@@ -279,8 +320,8 @@
                     <li>Visual Studios</li>
                 </ul>
                 <div class="d-flex justify-content-center">
-                    <div><a href="https://www.linkedin.com/in/miranda-pyles/"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#51424E" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" /></svg><span class="sr-only">Miranda Pyles' LinkedIn</span></a></div>
-                    <div><a href="web-resume.pdf"><svg xmlns="http://www.w3.org/2000/svg" height="29" width="25" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#51424E" d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM216 232V334.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V232c0-13.3 10.7-24 24-24s24 10.7 24 24z" /></svg><span class="sr-only">Miranda Pyles' Resume File</span></a></div>
+                    <div><a href="https://www.linkedin.com/in/miranda-pyles/"><svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#51424E" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" /></svg><span class="sr-only">Miranda Pyles' LinkedIn</span></a></div>
+                    <div><a href="web-resume.pdf"><svg xmlns="http://www.w3.org/2000/svg" height="46" width="38" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#51424E" d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM216 232V334.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V232c0-13.3 10.7-24 24-24s24 10.7 24 24z" /></svg><span class="sr-only">Miranda Pyles' Resume File</span></a></div>
                 </div>
             </div>
 
@@ -330,12 +371,13 @@
             <div class="d-flex flex-column">
                 <div class="d-flex flex-around">
                     <div class="d-flex flex-column">
-                        <div style="height: 300px; min-width: 300px; background-color: #51424E;margin:1em 0 0 2em;"></div>
+                        <div style="border: 4px solid #51424E; height: 300px; min-width: 300px; background-image:url(imgs/headshot.jpg); background-size:cover; background-color: #51424E; margin: 1em 0 0 2em;"></div>
 
                         <div style="border: 4px solid #51424E; margin: 2em 0 0 2em; padding:1em; min-width:300px;">
                             <ul class="shipporimincho-bold neutral" style="list-style-type:none;margin:.5em 0 0 0;padding:0;">
                                 <li style="margin-bottom:5px;"><i class="fa fa-user"></i> Miranda Pyles</li>
                                 <li style="margin-bottom:5px;"><i class="fa fa-briefcase"></i> Frontend Web Developer</li>
+                                <li style="margin-bottom:5px;"><i class="fa fa-map"></i> Based in Dallas, TX</li>
                                 <li><i class="fa fa-envelope"></i> mpyles2013@gmail.com</li>
                             </ul>
                             <h3 class="shipporimincho-bold neutral" style="margin-top:.5em;">Skills/Softwares</h3>
