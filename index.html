@@ -30,7 +30,28 @@
 
         body {
             background-color: #FBF4D7;
-            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            overflow-y: scroll;
+        }
+
+        /* width */
+        ::-webkit-scrollbar {
+            width: 15px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #FBF4D7;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #51424E;
+        }
+
+            /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #51424E;
         }
 
         .footer{
@@ -57,22 +78,30 @@
             .nav-menu {
                 font-size: 24px;
             }
+            .mobile-view{
+                display:none;
+            }
         }
-
 
         @media only screen and (max-width: 768px) {
             .mainTitle {
                 font-size: 64px;
+                margin-top: 3em;
             }
 
             .nav-menu {
                 font-size: 16px;
             }
 
-            .space-above {
-                margin-top: .5em;
+            .full-view {
+                display: none;
+            }
+
+            .mobile-view{
+                display:block;
             }
         }
+
         #social-bar{
             position:absolute;
             top:.5em;
@@ -133,40 +162,8 @@
             margin: 0 1em 0 1em;
         }
 
-        /* Media queries - Responsive timeline on screens less than 600px wide */
-        @media screen and (max-width: 600px) {
-            /* Place the timelime to the left */
-            .timeline::after {
-                left: 31px;
-            }
-
-            /* Full-width containers */
-            .companyInfo {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
-                text-align: left;
-            }
-
-            .jobDetails {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
-                text-align: left;
-                margin-top: 0px;
-            }
-
-            .companyInfo::after {
-                content: '';
-                position: absolute;
-                width: 20px;
-                height: 20px;
-                left: 32px;
-            }
-
-            .content {
-                margin: 0;
-            }
+        .form-floating > label::after {
+            background-color: transparent !important;
         }
 
     </style>
@@ -180,23 +177,22 @@
         <div class="d-flex justify-content-center">
             <ul class="nav justify-content-center">
                 <li class="nav-item nav-menu">
-                    <button id="work" onClick="getBtn(this.id)" class="nav-link neutral shipporimincho-bold">Work</button>
+                    <button id="work" onClick="initPage(this.id)" class="nav-link neutral shipporimincho-bold">Work</button>
                     <!-- <a class="nav-link neutral shipporimincho-bold" href="#work">Work</a> -->
                 </li>
                 <li class="nav-border" style="border-right: 2px solid #51424E;"></li>
                 <li class="nav-item nav-menu">
-                    <button id="resume" onClick="getBtn(this.id)" class="nav-link neutral shipporimincho-bold">Resume</button>
+                    <button id="resume" onClick="initPage(this.id)" class="nav-link neutral shipporimincho-bold">Resume</button>
                     <!-- <a class="nav-link neutral shipporimincho-bold" href="#about">Resume</a> -->
                 </li>
                 <li class="nav-border" style="border-right: 2px solid #51424E;"></li>
                 <li class="nav-item nav-menu">
-                    <button id="contact" onClick="getBtn(this.id)" class="nav-link neutral shipporimincho-bold">Contact</button>
+                    <button id="contact" onClick="initPage(this.id)" class="nav-link neutral shipporimincho-bold">Contact</button>
                     <!-- <a class="nav-link neutral shipporimincho-bold" href="#contact">Contact</a> -->
                 </li>
             </ul>
         </div>
         <div class="d-flex flex-column center" id="social-bar">
-            <div><a href="https://www.instagram.com/pandamoniem1/"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#51424E" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" /></svg><span class="sr-only">Miranda Pyles' Instagram Account: @pandamoniem1</span></a></div>
             <div style="margin-top:5px;"><a href="https://www.linkedin.com/in/miranda-pyles/"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#51424E" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" /></svg><span class="sr-only">Miranda Pyles' LinkedIn</span></a></div>
             <div style="margin-top:5px;"><a href="mailto:mpyles2013@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="28" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#51424E" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" /></svg><span class="sr-only">Miranda Pyles' Email: mpyles2013@gmail.com</span></a></div>
         </div>
@@ -208,17 +204,17 @@
         <div class="d-flex justify-content-end" style="margin:1em 1em 0 0;">
             <ul class="nav justify-content-center">
                 <li class="nav-item nav-menu">
-                    <button id="work-1" class="nav-link neutral shipporimincho-bold">Work</button>
+                    <button id="work-1" onclick="nextPage(this.id)" class="nav-link neutral shipporimincho-bold">Work</button>
                     <!-- <a class="nav-link neutral shipporimincho-bold" href="#work">Work</a> -->
                 </li>
                 <li class="nav-border" style="border-right: 2px solid #51424E;"></li>
                 <li class="nav-item nav-menu">
-                    <button id="resume-1" class="nav-link neutral shipporimincho-bold">Resume</button>
+                    <button id="resume-1" onclick="nextPage(this.id)" class="nav-link neutral shipporimincho-bold">Resume</button>
                     <!-- <a class="nav-link neutral shipporimincho-bold" href="#about">Resume</a> -->
                 </li>
                 <li class="nav-border" style="border-right: 2px solid #51424E;"></li>
                 <li class="nav-item nav-menu">
-                    <button id="contact-1" class="nav-link neutral shipporimincho-bold">Contact</button>
+                    <button id="contact-1" onclick="nextPage(this.id)" class="nav-link neutral shipporimincho-bold">Contact</button>
                     <!-- <a class="nav-link neutral shipporimincho-bold" href="#contact">Contact</a> -->
                 </li>
             </ul>
@@ -226,7 +222,9 @@
     </div>
 
 
-    <div id="work-page" class="hide"></div>
+    <div id="work-page" class="container-fluid hide space-above">
+        <h2 class="plaster neutral" style="font-size:48px;">Work</h2>
+    </div>
     <div id="resume-page" class="container-fluid hide space-above">
         <div class="d-flex flex-column">
             <div class="d-flex flex-around">
@@ -236,7 +234,7 @@
                             <div style="border: 4px solid #51424E; margin: 2em 0 0 2em; padding:1em; min-width:300px;">
                                 <ul class="shipporimincho-bold neutral" style="list-style-type:none;margin:.5em 0 0 0;padding:0;">
                                     <li style="margin-bottom:5px;"><i class="fa fa-user"></i> Miranda Pyles</li>
-                                    <li style="margin-bottom:5px;"><i class="fa fa-briefcase"></i> Frontend Developer</li>
+                                    <li style="margin-bottom:5px;"><i class="fa fa-briefcase"></i> Frontend Web Developer</li>
                                     <li><i class="fa fa-envelope"></i> mpyles2013@gmail.com</li>
                                 </ul>
                                 <h3 class="shipporimincho-bold neutral" style="margin-top:.5em;">Skills/Softwares</h3>
@@ -245,16 +243,14 @@
                                     <li>CSS</li>
                                     <li>PHP</li>
                                     <li>JavaScript</li>
-                                    <li>XHTML</li>
                                     <li>Adobe Photoshop</li>
                                     <li>Adobe Illustrator</li>
                                     <li>Adobe Dreamweaver</li>
                                     <li>Figma</li>
-                                    <li>Cascade Management Systems</li>
+                                    <li>Cascade CMS</li>
                                     <li>Visual Studios</li>
                                 </ul>
                                 <div class="d-flex justify-content-center">
-                                    <div><a href="https://www.instagram.com/pandamoniem1/"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#51424E" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" /></svg><span class="sr-only">Miranda Pyles' Instagram Account: @pandamoniem1</span></a></div>
                                     <div><a href="https://www.linkedin.com/in/miranda-pyles/"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#51424E" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" /></svg><span class="sr-only">Miranda Pyles' LinkedIn</span></a></div>
                                     <div><a href="web-resume.pdf"><svg xmlns="http://www.w3.org/2000/svg" height="29" width="25" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#51424E" d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM216 232V334.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V232c0-13.3 10.7-24 24-24s24 10.7 24 24z"/></svg><span class="sr-only">Miranda Pyles' Resume File</span></a></div>
                                 </div>
@@ -262,13 +258,40 @@
                         </div>
 
                         <div class="d-flex flex-grow-1 flex-column">
-                            <div  style="border: 4px solid #51424E; margin: 1em 2em 0 2em; padding:2em 1em 1em 1em; height:200px;">
-                                <h2 class="plaster">Summary</h2>
-                                <p class="space-above" style="font-size:16px;">Frontend Web Developer with 10 years of designing and coding websites using CSS and HTML. Open-minded and a quick learner, able to pick up new coding languages and software.</p>
+                            <div  style="border: 4px solid #51424E; margin: 1em 2em 0 2em; padding:2em 1em 1em 1em;">
+                                <h2 class="plaster neutral">About</h2>
+                                <p class="space-above" style="font-size:16px;">Frontend Web Developer with 8 years of designing and coding websites using CSS and HTML. Open-minded and a quick learner, able to pick up new coding languages and software.</p>
+                                
                             </div>
                             <div style="border: 4px solid #51424E; margin: 2em 2em 0 2em; padding: 2em 1em 1em 1em; ">
-                                <h2 class="plaster">Work Experience</h2>
-                                <div class="timeline">
+                                <h2 class="plaster neutral">Work Experience</h2>
+                                <div class="mobile-view">
+                                    <p><span class="shipporimincho-bold" style="font-size:20px;">Mitchell E. Daniels Jr., School of Business</span><br>02/2022 - 05/2024</p>
+                                    <p class="shipporimincho-bold" style="font-size:20px;margin-bottom:0;">Intern Web Developer</p>
+                                    <ul style="margin:0;">
+                                        <li>Overhauled old designs to fit a newer concept</li>
+                                        <li>Communicated with clients to resolve their issues</li>
+                                        <li>Maintained the website with current news and information</li>
+                                    </ul>
+
+                                    <p class="space-above"><span class="shipporimincho-bold" style="font-size:20px;">Whitney's Wings</span><br>03/2020 - 05/2020</p>
+                                    <p class="shipporimincho-bold" style="font-size:20px;margin-bottom:0;">Volunteer Web Developer</p>
+                                    <ul style="margin:0;">
+                                        <li>Collaborated with client to conceptualize their idea</li>
+                                        <li>Prototyped concepts using Figma</li>
+                                        <li>Coded the site using Dreamweaver</li>
+                                    </ul>
+
+                                    <p class="space-above"><span class="shipporimincho-bold" style="font-size:20px;">Floyd Central High School</span><br>08/2017 - 05/2020</p>
+                                    <p class="shipporimincho-bold" style="font-size:20px;margin-bottom:0;">Student Webmaster</p>
+                                    <ul style="margin:0;">
+                                        <li>Updated school website using WordPress</li>
+                                        <li>Designed the home page for the web design class</li>
+                                        <li>Built website content and designs using HTML and CSS</li>
+                                    </ul>
+
+                                </div>
+                                <div id="timeline-container" class="timeline full-view">
 	                                <div class="row">
 		                                <div class="col-sm-6 companyInfo">
     		                                <div class="content">
@@ -281,7 +304,7 @@
         		                                <ul style="margin:0;">
         			                                <li>Overhauled old designs to fit a newer concept</li>
             		                                <li>Communicated with clients to resolve their issues</li>
-            		                                <li>Communicated with clients to resolve their issues</li>
+            		                                <li>Maintained the website with current news and information</li>
         		                                </ul>
     		                                </div>
     	                                </div>
@@ -323,10 +346,17 @@
                                  </div><!-- closes timeline -->
                             </div>
                             <div style="border: 4px solid #51424E; margin: 2em 2em 0 2em; padding: 2em 1em 1em 1em; ">
-                                <h2 class="plaster">Education</h2>
-                                <div class="d-flex justify-content-between">
-                                    <p><span class="shipporimincho-bold" style="font-size:20px;">B.S. in Web Programming and Design</span><br>Purdue University - West Lafayette, IN</p>
-                                    <p style="font-size:20px;">08/2020 - 05/2024</p>
+                                <h2 class="plaster neutral">Education</h2>
+                                <div class="mobile-view">
+                                    <p class="shipporimincho-bold" style="font-size:18px;margin-bottom:0;">B.S. in Web Programming and Design</p>
+                                    <p style="font-size:18px;">08/2020 - 05/2024</p>
+                                    <p>Purdue University - West Lafayette, IN</p>
+                                </div>
+                                <div class="full-view">
+                                    <div class="d-flex justify-content-between">
+                                        <p><span class="shipporimincho-bold" style="font-size:20px;">B.S. in Web Programming and Design</span><br>Purdue University - West Lafayette, IN</p>
+                                        <p style="font-size:20px;">08/2020 - 05/2024</p>
+                                    </div>
                                 </div>
                     
                             </div>
@@ -342,22 +372,68 @@
             
         
     </div>
-    <div id="contact-page" class="hide"></div>
+    <div id="contact-page" class="container-fluid hide space-above">
+        <div class="d-flex flex-column mx-auto" style="border: 4px solid #51424E;padding:1em; width:35%;">
+            <h2 class="plaster neutral" style="font-size:48px;">Contact</h2>
+            <form action="" method="post">
+                <div class="form-floating mb-2 mt-2">
+                    <input style="background-color: #FBF4D7; border: 1px solid #51424E; " type="text" class="form-control" id="name" placeholder="Enter name" name="name" required>
+                    <label class="neutral" for="name">Name</label>
+                </div>
+                <div class="form-floating mb-2 mt-2">
+                    <input style="background-color: #FBF4D7; border: 1px solid #51424E; " type="text" class="form-control" id="email" placeholder="Enter email" name="email" required>
+                    <label class="neutral" for="email">Email</label>
+                </div>
+                
+                <div class="form-floating mb-2 mt-2">
+                    <input style="background-color: #FBF4D7; border: 1px solid #51424E; " type="text" class="form-control" id="subject" placeholder="Enter subject" name="subject">
+                    <label class="neutral" for="subject">Subject</label>
+                </div>
+                <div class="form-floating">
+                    <textarea class="form-control" id="message" style="background-color: #FBF4D7; border: 1px solid #51424E; height:150px; " name="message" placeholder="Message goes here" required></textarea>
+                    <label class="neutral" for="message">Message</label>
+                </div>
+                <button type="submit" style="font-size: 24px; margin-top: 1em; color: #FBF4D7; border:none;" class="btn btn-primary neutral-bg plaster" name="">SEND</button>    
+            </form>
+        </div>
+        <div class="footer">
+                <p>Miranda Pyles © 2024</p>
+        </div>
+    </div>
 
 
     <script type="text/javascript">
         var button;
+        var currentPage;
 
-        function getBtn(clickedID) {
+        function initPage(clickedID) {
             button = clickedID;
             document.getElementById("landing-page").classList.toggle("hide");
             document.getElementById("nav").classList.toggle("hide");
             if (button == "work") {
                 document.getElementById("work-page").classList.toggle("hide");
+                currentPage = "work-page";
             } else if (button == "resume") {
                 document.getElementById("resume-page").classList.toggle("hide");
+                currentPage = "resume-page";
             } else if (button == "contact") {
                 document.getElementById("contact-page").classList.toggle("hide");
+                currentPage = "contact-page";
+            }
+        }
+
+        function nextPage(clickedID) {
+            button = clickedID;
+            document.getElementById(currentPage).classList.toggle("hide");
+            if (button == "work-1") {
+                document.getElementById("work-page").classList.toggle("hide");
+                currentPage = "work-page";
+            } else if (button == "resume-1") {
+                document.getElementById("resume-page").classList.toggle("hide");
+                currentPage = "resume-page";
+            } else if (button == "contact-1") {
+                document.getElementById("contact-page").classList.toggle("hide");
+                currentPage = "contact-page";
             }
         }
     </script>

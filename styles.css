@@ -60,7 +60,7 @@ a{
 }
 
 .accent {
-    color: #FF98F2;
+    color: #AB98FF;
 }
 
 .mainTitle{
@@ -78,6 +78,12 @@ a{
 .neutral-bg {
     background-color: #51424E;
 }
+.light {
+    color: #FBF4D7;
+}
+.main-bg {
+    background-color: #FBF4D7;
+}
 .shipporimincho-regular {
     font-family: Shippori Mincho, Constantia;
 }
@@ -88,7 +94,7 @@ a{
     font-size:24px;
 }
 .headingtwo{
-    font-size:32px;
+    font-size:64px;
 }
 .active {
     color: #A7469D;
