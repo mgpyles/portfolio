@@ -134,6 +134,10 @@
             .mobile-view {
                 display: block;
             }
+
+            #work-page h2{
+                margin-top:.25em;
+            }
         }
 
         #social-bar {
@@ -200,64 +204,75 @@
         .form-floating > label::after {
             background-color: transparent !important;
         }
+
+        .nav-button:hover {
+            color: #AB98FF;
+        }
+
+        .nav-button:focus {
+            color: #64579F;
+        }
     </style>
 
 
 </head>
 <body>
-    <div class="container-fluid" id="landing-page">
-        <h1 class="accent plaster mainTitle center space-above">Miranda</h1>
+    <div class="container-fluid">
 
-        <div class="d-flex justify-content-center">
-            <ul class="nav justify-content-center">
-                <li class="nav-item nav-menu">
-                    <button id="work" onClick="initPage(this.id)" class="nav-link neutral shipporimincho-bold">Portfolio</button>
-                    <!-- <a class="nav-link neutral shipporimincho-bold" href="#work">Work</a> -->
-                </li>
-                <li class="nav-border" style="border-right: 2px solid #51424E;"></li>
-                <li class="nav-item nav-menu">
-                    <button id="resume" onClick="initPage(this.id)" class="nav-link neutral shipporimincho-bold">Resume</button>
-                    <!-- <a class="nav-link neutral shipporimincho-bold" href="#about">Resume</a> -->
-                </li>
-                <li class="nav-border" style="border-right: 2px solid #51424E;"></li>
-                <li class="nav-item nav-menu">
-                    <button id="contact" onClick="initPage(this.id)" class="nav-link neutral shipporimincho-bold">Contact</button>
-                    <!-- <a class="nav-link neutral shipporimincho-bold" href="#contact">Contact</a> -->
-                </li>
-            </ul>
-        </div>
-        <div class="d-flex flex-column center" id="social-bar">
-            <div style="margin-top:5px;"><a href="https://www.linkedin.com/in/miranda-pyles/"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#51424E" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" /></svg><span class="sr-only">Miranda Pyles' LinkedIn</span></a></div>
-            <div style="margin-top:5px;"><a href="mailto:mpyles2013@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="28" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#51424E" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" /></svg><span class="sr-only">Miranda Pyles' Email: mpyles2013@gmail.com</span></a></div>
-        </div>
+
+        <div class="container-fluid" id="landing-page">
+            <h1 class="accent plaster mainTitle center space-above">Miranda</h1>
+
+            <div class="d-flex justify-content-center">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item nav-menu">
+                        <button id="work" onClick="initPage(this.id)" class="nav-link neutral shipporimincho-bold nav-button">Portfolio</button>
+                        <!-- <a class="nav-link neutral shipporimincho-bold" href="#work">Work</a> -->
+                    </li>
+                    <li class="nav-border" style="border-right: 2px solid #51424E;"></li>
+                    <li class="nav-item nav-menu">
+                        <button id="resume" onClick="initPage(this.id)" class="nav-link neutral shipporimincho-bold nav-button">Resume</button>
+                        <!-- <a class="nav-link neutral shipporimincho-bold" href="#about">Resume</a> -->
+                    </li>
+                    <li class="nav-border" style="border-right: 2px solid #51424E;"></li>
+                    <li class="nav-item nav-menu">
+                        <button id="contact" onClick="initPage(this.id)" class="nav-link neutral shipporimincho-bold nav-button">Contact</button>
+                        <!-- <a class="nav-link neutral shipporimincho-bold" href="#contact">Contact</a> -->
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex flex-column center" id="social-bar">
+                <div style="margin-top:5px;"><a href="https://www.linkedin.com/in/miranda-pyles/"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#51424E" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" /></svg><span class="sr-only">Miranda Pyles' LinkedIn</span></a></div>
+                <div style="margin-top:5px;"><a href="mailto:mpyles2013@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="28" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#51424E" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" /></svg><span class="sr-only">Miranda Pyles' Email: mpyles2013@gmail.com</span></a></div>
+            </div>
             <div id="footer">
                 <p>Miranda Pyles © 2025</p>
             </div>
-    </div>
-    <div class="container-fluid hide" id="nav">
-        <div class="d-flex justify-content-end" style="margin:1em 1em 0 0;">
-            <ul class="nav justify-content-center">
-                <li class="nav-item nav-menu">
-                    <button id="work-1" onclick="nextPage(this.id)" class="nav-link neutral shipporimincho-bold">Portfolio</button>
-                    <!-- <a class="nav-link neutral shipporimincho-bold" href="#work">Work</a> -->
-                </li>
-                <li class="nav-border" style="border-right: 2px solid #51424E;"></li>
-                <li class="nav-item nav-menu">
-                    <button id="resume-1" onclick="nextPage(this.id)" class="nav-link neutral shipporimincho-bold">Resume</button>
-                    <!-- <a class="nav-link neutral shipporimincho-bold" href="#about">Resume</a> -->
-                </li>
-                <li class="nav-border" style="border-right: 2px solid #51424E;"></li>
-                <li class="nav-item nav-menu">
-                    <button id="contact-1" onclick="nextPage(this.id)" class="nav-link neutral shipporimincho-bold">Contact</button>
-                    <!-- <a class="nav-link neutral shipporimincho-bold" href="#contact">Contact</a> -->
-                </li>
-            </ul>
         </div>
-    </div>
+        <div class="container-fluid hide" id="nav">
+            <div class="d-flex justify-content-end" style="margin:1em 1em 0 0;">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item nav-menu">
+                        <button id="work-1" onclick="nextPage(this.id)" class="nav-link neutral shipporimincho-bold nav-button">Portfolio</button>
+                        <!-- <a class="nav-link neutral shipporimincho-bold" href="#work">Work</a> -->
+                    </li>
+                    <li class="nav-border" style="border-right: 2px solid #51424E;"></li>
+                    <li class="nav-item nav-menu">
+                        <button id="resume-1" onclick="nextPage(this.id)" class="nav-link neutral shipporimincho-bold nav-button">Resume</button>
+                        <!-- <a class="nav-link neutral shipporimincho-bold" href="#about">Resume</a> -->
+                    </li>
+                    <li class="nav-border" style="border-right: 2px solid #51424E;"></li>
+                    <li class="nav-item nav-menu">
+                        <button id="contact-1" onclick="nextPage(this.id)" class="nav-link neutral shipporimincho-bold nav-button">Contact</button>
+                        <!-- <a class="nav-link neutral shipporimincho-bold" href="#contact">Contact</a> -->
+                    </li>
+                </ul>
+            </div>
+        </div>
 
 
-    <div id="work-page" class="container-fluid hide space-above">
-        <h2 class="plaster neutral center" style="font-size:48px;">Portfolio</h2>
+        <div id="work-page" class="container-fluid hide">
+            <h2 class="plaster neutral center" style="font-size:48px;">Portfolio</h2>
             <div id="portfolio-container" class="container-fluid space-above">
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col">
@@ -283,7 +298,7 @@
                         <div class="card h-100" style="border: 4px solid #51424E;padding:1em;">
                             <img src="..." class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Realtor Website Mockup</h5>
+                                <h5 class="card-title">Mitchell E. Daniels Jr., School of Business Mockups and Applications</h5>
                                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
                             </div>
                         </div>
@@ -291,229 +306,222 @@
                 </div>
             </div>
 
-    </div>
-    <div id="resume-page" class="container-fluid hide space-above">
-        <div class="mobile-view">
-            <div style="border: 4px solid #51424E; margin: auto; padding:2em 1em 1em 1em;">
-                <h2 class="plaster neutral">About</h2>
-                <p class="space-above">Frontend Web Developer with 8 years of designing and coding websites using CSS and HTML. Open-minded and a quick learner, able to pick up new coding languages and software.</p>
-            </div>
-
-            <div style="border: 4px solid #51424E; margin: auto; margin-top:1em; padding:1em;">
-                <ul class="shipporimincho-bold neutral" style="list-style-type:none;margin:.5em 0 0 0;padding:0;">
-                    <li style="margin-bottom:5px;"><i class="fa fa-user"></i> Miranda Pyles</li>
-                    <li style="margin-bottom:5px;"><i class="fa fa-briefcase"></i> Frontend Web Developer</li>
-                    <li style="margin-bottom:5px;"><i class="fa fa-map"></i> Based in Dallas, TX</li>
-                    <li><i class="fa fa-envelope"></i> mpyles2013@gmail.com</li>
-                </ul>
-                <h3 class="shipporimincho-bold neutral" style="margin-top:.5em;">Skills/Softwares</h3>
-                <ul class="neutral">
-                    <li>HTML5</li>
-                    <li>CSS</li>
-                    <li>PHP</li>
-                    <li>JavaScript</li>
-                    <li>Adobe Photoshop</li>
-                    <li>Adobe Illustrator</li>
-                    <li>Adobe Dreamweaver</li>
-                    <li>Figma</li>
-                    <li>Cascade CMS</li>
-                    <li>Visual Studios</li>
-                </ul>
-                <div class="d-flex justify-content-center">
-                    <div><a href="https://www.linkedin.com/in/miranda-pyles/"><svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#51424E" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" /></svg><span class="sr-only">Miranda Pyles' LinkedIn</span></a></div>
-                    <div><a href="web-resume.pdf"><svg xmlns="http://www.w3.org/2000/svg" height="46" width="38" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#51424E" d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM216 232V334.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V232c0-13.3 10.7-24 24-24s24 10.7 24 24z" /></svg><span class="sr-only">Miranda Pyles' Resume File</span></a></div>
-                </div>
-            </div>
-
-            <div style="border: 4px solid #51424E; margin: auto; margin-top:1em; padding: 2em 1em 1em 1em; ">
-                <h2 class="plaster neutral">Work Experience</h2>
-                <p><span class="shipporimincho-bold" style="font-size:20px;">Mitchell E. Daniels Jr., School of Business</span><br>02/2022 - 05/2024</p>
-                <p class="shipporimincho-bold" style="font-size:20px;margin-bottom:0;">Intern Web Developer</p>
-                <ul style="margin:0;">
-                    <li>Overhauled old designs to fit a newer concept</li>
-                    <li>Communicated with clients to resolve their issues</li>
-                    <li>Maintained the website with current news and information</li>
-                </ul>
-
-                <p class="space-above"><span class="shipporimincho-bold" style="font-size:20px;">Whitney's Wings</span><br>03/2020 - 05/2020</p>
-                <p class="shipporimincho-bold" style="font-size:20px;margin-bottom:0;">Volunteer Web Developer</p>
-                <ul style="margin:0;">
-                    <li>Collaborated with client to conceptualize their idea</li>
-                    <li>Prototyped concepts using Figma</li>
-                    <li>Coded the site using Dreamweaver</li>
-                </ul>
-
-                <p class="space-above"><span class="shipporimincho-bold" style="font-size:20px;">Floyd Central High School</span><br>08/2017 - 05/2020</p>
-                <p class="shipporimincho-bold" style="font-size:20px;margin-bottom:0;">Student Webmaster</p>
-                <ul style="margin:0;">
-                    <li>Updated school website using WordPress</li>
-                    <li>Designed the home page for the web design class</li>
-                    <li>Built website content and designs using HTML and CSS</li>
-                </ul>
-
-            </div>
-
-            <div style="border: 4px solid #51424E; margin: auto; margin-top:1em; padding: 2em 1em 1em 1em; ">
-                <h2 class="plaster neutral">Education</h2>
-                <p class="shipporimincho-bold" style="font-size:18px;margin-bottom:0;">B.S. in Web Programming and Design</p>
-                <p style="font-size:18px;">08/2020 - 05/2024</p>
-                <p>Purdue University - West Lafayette, IN</p>
-            </div>
-
-            <div class="footer">
-                <p>Miranda Pyles © 2025</p>
-            </div>
-
         </div>
+        <div id="resume-page" class="container-fluid hide space-above">
+            <div class="mobile-view">
+                <div style="border: 4px solid #51424E; border-radius: 5px; margin: auto; padding: 2em 1em 1em 1em;">
+                    <h2 class="plaster neutral">About</h2>
+                    <p class="space-above">Frontend Web Developer with 8 years of designing and coding websites using CSS and HTML. Open-minded and a quick learner, able to pick up new coding languages and software.</p>
+                </div>
 
-        <div id="resume-container" class="full-view">
+                <div style="border: 4px solid #51424E; border-radius: 5px; margin: auto; margin-top: 1em; padding: 1em;">
+                    <ul class="shipporimincho-bold neutral" style="list-style-type:none;margin:.5em 0 0 0;padding:0;">
+                        <li style="margin-bottom:5px;"><i class="fa fa-user"></i> Miranda Pyles</li>
+                        <li style="margin-bottom:5px;"><i class="fa fa-briefcase"></i> Frontend Web Developer</li>
+                        <li style="margin-bottom:5px;"><i class="fa fa-map"></i> Based in Dallas, TX</li>
+                        <li><i class="fa fa-envelope"></i> mpyles2013@gmail.com</li>
+                    </ul>
+                    <h3 class="shipporimincho-bold neutral" style="margin-top:.5em;">Skills/Softwares</h3>
+                    <ul class="neutral">
+                        <li>HTML5</li>
+                        <li>CSS</li>
+                        <li>PHP</li>
+                        <li>JavaScript</li>
+                        <li>Adobe Photoshop</li>
+                        <li>Adobe Illustrator</li>
+                        <li>Adobe Dreamweaver</li>
+                        <li>Figma</li>
+                        <li>Cascade CMS</li>
+                        <li>Visual Studios</li>
+                    </ul>
+                    <div class="d-flex justify-content-center">
+                        <div><a href="https://www.linkedin.com/in/miranda-pyles/"><svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#51424E" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" /></svg><span class="sr-only">Miranda Pyles' LinkedIn</span></a></div>
+                        <div><a href="web-resume.pdf"><svg xmlns="http://www.w3.org/2000/svg" height="46" width="38" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#51424E" d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM216 232V334.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V232c0-13.3 10.7-24 24-24s24 10.7 24 24z" /></svg><span class="sr-only">Miranda Pyles' Resume File</span></a></div>
+                    </div>
+                </div>
 
-            <div class="d-flex flex-column">
-                <div class="d-flex flex-around">
-                    <div class="d-flex flex-column">
-                        <div style="border: 4px solid #51424E; height: 300px; min-width: 300px; background-image:url(imgs/headshot.jpg); background-size:cover; background-color: #51424E; margin: 1em 0 0 2em;"></div>
+                <div style="border: 4px solid #51424E; border-radius: 5px; margin: auto; margin-top: 1em; padding: 2em 1em 1em 1em; ">
+                    <h2 class="plaster neutral">Work Experience</h2>
+                    <p><span class="shipporimincho-bold" style="font-size:20px;">Mitchell E. Daniels Jr., School of Business</span><br>02/2022 - 05/2024</p>
+                    <p class="shipporimincho-bold" style="font-size:20px;margin-bottom:0;">Intern Web Developer</p>
+                    <ul style="margin:0;">
+                        <li>Overhauled old designs to fit a newer concept</li>
+                        <li>Communicated with clients to resolve their issues</li>
+                        <li>Maintained the website with current news and information</li>
+                    </ul>
 
-                        <div style="border: 4px solid #51424E; margin: 2em 0 0 2em; padding:1em; min-width:300px;">
-                            <ul class="shipporimincho-bold neutral" style="list-style-type:none;margin:.5em 0 0 0;padding:0;">
-                                <li style="margin-bottom:5px;"><i class="fa fa-user"></i> Miranda Pyles</li>
-                                <li style="margin-bottom:5px;"><i class="fa fa-briefcase"></i> Frontend Web Developer</li>
-                                <li style="margin-bottom:5px;"><i class="fa fa-map"></i> Based in Dallas, TX</li>
-                                <li><i class="fa fa-envelope"></i> mpyles2013@gmail.com</li>
-                            </ul>
-                            <h3 class="shipporimincho-bold neutral" style="margin-top:.5em;">Skills/Softwares</h3>
-                            <ul class="neutral">
-                                <li>HTML5</li>
-                                <li>CSS</li>
-                                <li>PHP</li>
-                                <li>JavaScript</li>
-                                <li>Adobe Photoshop</li>
-                                <li>Adobe Illustrator</li>
-                                <li>Adobe Dreamweaver</li>
-                                <li>Figma</li>
-                                <li>Cascade CMS</li>
-                                <li>Visual Studios</li>
-                            </ul>
-                            <div class="d-flex justify-content-center">
-                                <div><a href="https://www.linkedin.com/in/miranda-pyles/"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#51424E" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" /></svg><span class="sr-only">Miranda Pyles' LinkedIn</span></a></div>
-                                <div><a href="web-resume.pdf"><svg xmlns="http://www.w3.org/2000/svg" height="29" width="25" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#51424E" d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM216 232V334.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V232c0-13.3 10.7-24 24-24s24 10.7 24 24z" /></svg><span class="sr-only">Miranda Pyles' Resume File</span></a></div>
+                    <p class="space-above"><span class="shipporimincho-bold" style="font-size:20px;">Whitney's Wings</span><br>03/2020 - 05/2020</p>
+                    <p class="shipporimincho-bold" style="font-size:20px;margin-bottom:0;">Volunteer Web Developer</p>
+                    <ul style="margin:0;">
+                        <li>Collaborated with client to conceptualize their idea</li>
+                        <li>Prototyped concepts using Figma</li>
+                        <li>Coded the site using Dreamweaver</li>
+                    </ul>
+
+                    <p class="space-above"><span class="shipporimincho-bold" style="font-size:20px;">Floyd Central High School</span><br>08/2017 - 05/2020</p>
+                    <p class="shipporimincho-bold" style="font-size:20px;margin-bottom:0;">Student Webmaster</p>
+                    <ul style="margin:0;">
+                        <li>Updated school website using WordPress</li>
+                        <li>Designed the home page for the web design class</li>
+                        <li>Built website content and designs using HTML and CSS</li>
+                    </ul>
+
+                </div>
+
+                <div style="border: 4px solid #51424E; border-radius: 5px; margin: auto; margin-top: 1em; padding: 2em 1em 1em 1em; ">
+                    <h2 class="plaster neutral">Education</h2>
+                    <p class="shipporimincho-bold" style="font-size:18px;margin-bottom:0;">B.S. in Web Programming and Design</p>
+                    <p style="font-size:18px;">08/2020 - 05/2024</p>
+                    <p>Purdue University - West Lafayette, IN</p>
+                </div>
+
+            </div>
+
+            <div id="resume-container" class="full-view">
+
+                <div class="d-flex flex-column">
+                    <div class="d-flex flex-around">
+                        <div class="d-flex flex-column">
+                            <div style="border: 4px solid #51424E; border-radius:5px; height: 300px; min-width: 300px; background-image:url(imgs/headshot.jpg); background-size:cover; background-color: #51424E; margin: 1em 0 0 2em;"></div>
+
+                            <div style="border: 4px solid #51424E; border-radius: 5px; margin: 2em 0 0 2em; padding: 1em; min-width: 300px; ">
+                                <ul class="shipporimincho-bold neutral" style="list-style-type:none;margin:.5em 0 0 0;padding:0;">
+                                    <li style="margin-bottom:5px;"><i class="fa fa-user"></i> Miranda Pyles</li>
+                                    <li style="margin-bottom:5px;"><i class="fa fa-briefcase"></i> Frontend Web Developer</li>
+                                    <li style="margin-bottom:5px;"><i class="fa fa-map"></i> Based in Dallas, TX</li>
+                                    <li><i class="fa fa-envelope"></i> mpyles2013@gmail.com</li>
+                                </ul>
+                                <h3 class="shipporimincho-bold neutral" style="margin-top:.5em;">Skills/Softwares</h3>
+                                <ul class="neutral">
+                                    <li>HTML5</li>
+                                    <li>CSS</li>
+                                    <li>PHP</li>
+                                    <li>JavaScript</li>
+                                    <li>Adobe Photoshop</li>
+                                    <li>Adobe Illustrator</li>
+                                    <li>Adobe Dreamweaver</li>
+                                    <li>Figma</li>
+                                    <li>Cascade CMS</li>
+                                    <li>Visual Studios</li>
+                                </ul>
+                                <div class="d-flex justify-content-center">
+                                    <div><a href="https://www.linkedin.com/in/miranda-pyles/"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#51424E" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" /></svg><span class="sr-only">Miranda Pyles' LinkedIn</span></a></div>
+                                    <div><a href="web-resume.pdf"><svg xmlns="http://www.w3.org/2000/svg" height="29" width="25" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#51424E" d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM216 232V334.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V232c0-13.3 10.7-24 24-24s24 10.7 24 24z" /></svg><span class="sr-only">Miranda Pyles' Resume File</span></a></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="d-flex flex-grow-1 flex-column">
-                        <div style="border: 4px solid #51424E; margin: 1em 2em 0 2em; padding:2em 1em 1em 1em;">
-                            <h2 class="plaster neutral">About</h2>
-                            <p class="space-above" style="font-size:16px;">Frontend Web Developer with 8 years of designing and coding websites using CSS and HTML. Open-minded and a quick learner, able to pick up new coding languages and software.</p>
+                        <div class="d-flex flex-grow-1 flex-column">
+                            <div style="border: 4px solid #51424E; border-radius: 5px; margin: 1em 2em 0 2em; padding: 2em 1em 1em 1em;">
+                                <h2 class="plaster neutral">About</h2>
+                                <p class="space-above" style="font-size:16px;">Frontend Web Developer with 8 years of designing and coding websites using CSS and HTML. Open-minded and a quick learner, able to pick up new coding languages and software.</p>
 
-                        </div>
-                        <div style="border: 4px solid #51424E; margin: 2em 2em 0 2em; padding: 2em 1em 1em 1em; ">
-                            <h2 class="plaster neutral">Work Experience</h2>
-                            <div id="timeline-container" class="timeline">
-                                <div class="row">
-                                    <div class="col-sm-6 companyInfo">
-                                        <div class="content">
-                                            <p><span class="shipporimincho-bold" style="font-size:20px;">Mitchell E. Daniels Jr., School of Business</span><br>02/2022 - 05/2024</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 jobDetails">
-                                        <div class="content">
-                                            <p class="shipporimincho-bold" style="font-size:20px;margin-bottom:0;">Intern Web Developer</p>
-                                            <ul style="margin:0;">
-                                                <li>Overhauled old designs to fit a newer concept</li>
-                                                <li>Communicated with clients to resolve their issues</li>
-                                                <li>Maintained the website with current news and information</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-6 companyInfo">
-                                        <div class="content">
-                                            <p><span class="shipporimincho-bold" style="font-size:20px;">Whitney's Wings</span><br>03/2020 - 05/2020</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 jobDetails">
-                                        <div class="content">
-                                            <p class="shipporimincho-bold" style="font-size: 20px; margin-bottom: 0;">Volunteer Web Developer</p>
-                                            <ul style="margin:0;">
-                                                <li>Collaborated with client to conceptualize their idea</li>
-                                                <li>Prototyped concepts using Figma</li>
-                                                <li>Coded the site using Dreamweaver</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-6 companyInfo">
-                                        <div class="content">
-                                            <p><span class="shipporimincho-bold" style="font-size:20px;">Floyd Central High School</span><br />08/2017 - 05/2020</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 jobDetails">
-                                        <div class="content">
-                                            <p class="shipporimincho-bold" style="font-size: 20px; margin-bottom: 0;">Student Webmaster</p>
-                                            <ul style="margin:0;">
-                                                <li>Updated school website using WordPress</li>
-                                                <li>Designed the home page for the web design class</li>
-                                                <li>Built website content and designs using HTML and CSS</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- closes timeline -->
-                        </div>
-                        <div style="border: 4px solid #51424E; margin: 2em 2em 0 2em; padding: 2em 1em 1em 1em; ">
-                            <h2 class="plaster neutral">Education</h2>
-                            <div>
-                                <div class="d-flex justify-content-between">
-                                    <p><span class="shipporimincho-bold" style="font-size:20px;">B.S. in Web Programming and Design</span><br>Purdue University - West Lafayette, IN</p>
-                                    <p style="font-size:20px;">08/2020 - 05/2024</p>
-                                </div>
                             </div>
+                            <div style="border: 4px solid #51424E; border-radius: 5px; margin: 2em 2em 0 2em; padding: 2em 1em 1em 1em; ">
+                                <h2 class="plaster neutral">Work Experience</h2>
+                                <div id="timeline-container" class="timeline">
+                                    <div class="row">
+                                        <div class="col-sm-6 companyInfo">
+                                            <div class="content">
+                                                <p><span class="shipporimincho-bold" style="font-size:20px;">Mitchell E. Daniels Jr., School of Business</span><br>02/2022 - 05/2024</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 jobDetails">
+                                            <div class="content">
+                                                <p class="shipporimincho-bold" style="font-size:20px;margin-bottom:0;">Intern Web Developer</p>
+                                                <ul style="margin:0;">
+                                                    <li>Overhauled old designs to fit a newer concept</li>
+                                                    <li>Communicated with clients to resolve their issues</li>
+                                                    <li>Maintained the website with current news and information</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6 companyInfo">
+                                            <div class="content">
+                                                <p><span class="shipporimincho-bold" style="font-size:20px;">Whitney's Wings</span><br>03/2020 - 05/2020</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 jobDetails">
+                                            <div class="content">
+                                                <p class="shipporimincho-bold" style="font-size: 20px; margin-bottom: 0;">Volunteer Web Developer</p>
+                                                <ul style="margin:0;">
+                                                    <li>Collaborated with client to conceptualize their idea</li>
+                                                    <li>Prototyped concepts using Figma</li>
+                                                    <li>Coded the site using Dreamweaver</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6 companyInfo">
+                                            <div class="content">
+                                                <p><span class="shipporimincho-bold" style="font-size:20px;">Floyd Central High School</span><br />08/2017 - 05/2020</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 jobDetails">
+                                            <div class="content">
+                                                <p class="shipporimincho-bold" style="font-size: 20px; margin-bottom: 0;">Student Webmaster</p>
+                                                <ul style="margin:0;">
+                                                    <li>Updated school website using WordPress</li>
+                                                    <li>Designed the home page for the web design class</li>
+                                                    <li>Built website content and designs using HTML and CSS</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- closes timeline -->
+                            </div>
+                            <div style="border: 4px solid #51424E; border-radius: 5px; margin: 2em 2em 0 2em; padding: 2em 1em 1em 1em; ">
+                                <h2 class="plaster neutral">Education</h2>
+                                <div>
+                                    <div class="d-flex justify-content-between">
+                                        <p><span class="shipporimincho-bold" style="font-size:20px;">B.S. in Web Programming and Design</span><br>Purdue University - West Lafayette, IN</p>
+                                        <p style="font-size:20px;">08/2020 - 05/2024</p>
+                                    </div>
+                                </div>
 
+                            </div>
                         </div>
+
                     </div>
 
-                </div>
-
-                <div class="footer">
-                    <p>Miranda Pyles © 2025</p>
                 </div>
             </div>
-        </div>
-            
-        
-    </div>
-    <div id="contact-page" class="container-fluid hide space-above">
-        <div id="form-container" class="d-flex flex-column mx-auto" style="border: 4px solid #51424E;padding:1em;">
-            <h2 class="plaster neutral" style="font-size:48px;">Contact</h2>
-            <form action="https://formcarry.com/s/D3-smjmMNRS" method="POST" enctype="multipart/form-data">
-                <div class="form-floating mb-2 mt-2">
-                    <input style="background-color: #FBF4D7; border: 1px solid #51424E; " type="text" class="form-control" id="name" placeholder="Enter name" name="name" required>
-                    <label class="neutral" for="name">Name</label>
-                </div>
-                <div class="form-floating mb-2 mt-2">
-                    <input style="background-color: #FBF4D7; border: 1px solid #51424E; " type="text" class="form-control" id="email" placeholder="Enter email" name="email" required>
-                    <label class="neutral" for="email">Email</label>
-                </div>
-                
-                <div class="form-floating mb-2 mt-2">
-                    <input style="background-color: #FBF4D7; border: 1px solid #51424E; " type="text" class="form-control" id="subject" placeholder="Enter subject" name="subject">
-                    <label class="neutral" for="subject">Subject</label>
-                </div>
-                <div class="form-floating">
-                    <textarea class="form-control" id="message" style="background-color: #FBF4D7; border: 1px solid #51424E; height:150px; " name="message" placeholder="Message goes here" required></textarea>
-                    <label class="neutral" for="message">Message</label>
-                </div>
-                <button type="submit" style="font-size: 24px; margin-top: 1em; color: #FBF4D7; border:none;" class="btn btn-primary neutral-bg plaster" name="">SEND</button>    
-            </form>
-        </div>
-        <div class="footer">
-                <p>Miranda Pyles © 2025</p>
-        </div>
-    </div>
 
 
+        </div>
+        <div id="contact-page" class="container-fluid hide space-above">
+            <div id="form-container" class="d-flex flex-column mx-auto" style="border: 4px solid #51424E;padding:1em;">
+                <h2 class="plaster neutral" style="font-size:48px;">Contact</h2>
+                <form action="https://formcarry.com/s/D3-smjmMNRS" method="POST" enctype="multipart/form-data">
+                    <div class="form-floating mb-2 mt-2">
+                        <input style="background-color: #FBF4D7; border: 1px solid #51424E; " type="text" class="form-control" id="name" placeholder="Enter name" name="name" required>
+                        <label class="neutral" for="name">Name</label>
+                    </div>
+                    <div class="form-floating mb-2 mt-2">
+                        <input style="background-color: #FBF4D7; border: 1px solid #51424E; " type="text" class="form-control" id="email" placeholder="Enter email" name="email" required>
+                        <label class="neutral" for="email">Email</label>
+                    </div>
+
+                    <div class="form-floating mb-2 mt-2">
+                        <input style="background-color: #FBF4D7; border: 1px solid #51424E; " type="text" class="form-control" id="subject" placeholder="Enter subject" name="subject">
+                        <label class="neutral" for="subject">Subject</label>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control" id="message" style="background-color: #FBF4D7; border: 1px solid #51424E; height:150px; " name="message" placeholder="Message goes here" required></textarea>
+                        <label class="neutral" for="message">Message</label>
+                    </div>
+                    <button type="submit" style="font-size: 24px; margin-top: 1em; color: #FBF4D7; border:none;" class="btn btn-primary neutral-bg plaster" name="">SEND</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="main-footer" class="footer hide">
+            <p>Miranda Pyles © 2025</p>
+        </div>
+    </div>
     <script type="text/javascript">
         var button;
         var currentPage;
@@ -522,6 +530,7 @@
             button = clickedID;
             document.getElementById("landing-page").classList.toggle("hide");
             document.getElementById("nav").classList.toggle("hide");
+            document.getElementById("main-footer").classList.toggle("hide");
             if (button == "work") {
                 document.getElementById("work-page").classList.toggle("hide");
                 currentPage = "work-page";
