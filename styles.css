@@ -99,3 +99,44 @@ a{
 .active {
     color: #A7469D;
 }
+
+.nav-btn:hover {
+    color: #AB98FF;
+}
+
+.nav-btn:focus {
+    color: #64579F;
+}
+
+.btn-portfolio {
+    border: 1.5px solid #51424E;
+    border-radius: 5px;
+}
+
+.btn-portfolio:hover {
+    color: #51424E;
+    background-color: transparent;
+    border: 1.5px solid #51424E;
+    border-radius: 5px;
+}
+
+.btn-form {
+    border: 1.5px solid #51424E;
+    border-radius: 5px;
+}
+
+.btn-form:hover {
+    color: #51424E;
+    background-color: transparent;
+    border: 1.5px solid #51424E;
+    border-radius: 5px;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    margin-top: 1.5em;
+}

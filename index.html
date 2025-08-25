@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <title>Miranda Pyles</title>
     <meta name="description" content="Miranda Pyles' work portfolio and resume.">
-    <meta name="keywords" content="portfolio, web development, html">
+    <meta name="keywords" content="portfolio, web development, resume">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Miranda Pyles">
     <!-- Latest compiled and minified CSS -->
@@ -55,18 +55,10 @@
         }
 
             /* Handle on hover */
-            ::-webkit-scrollbar-thumb:hover {
-                background: #51424E;
-            }
-
-        .footer {
-            position: relative;
-            bottom: 0;
-            left: 0;
-            text-align: center;
-            width: 100%;
-            margin-top: 1.5em;
+        ::-webkit-scrollbar-thumb:hover {
+            background: #51424E;
         }
+
 
         #footer {
             position: absolute;
@@ -94,7 +86,7 @@
             }
 
             #resume-container {
-                width: 90%;
+                width: 100%;
                 display: block;
                 margin: auto;
             }
@@ -157,17 +149,17 @@
             margin: 0 auto;
         }
 
-            /* The actual timeline (the vertical ruler) */
-            .timeline::after {
-                content: '';
-                position: absolute;
-                width: 4px;
-                background-color: #51424E;
-                top: 0;
-                bottom: 0;
-                left: 50%;
-                margin-left: -3px;
-            }
+        /* The actual timeline (the vertical ruler) */
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #51424E;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+         }
 
         /* Container around content */
         .companyInfo {
@@ -205,38 +197,30 @@
             background-color: transparent !important;
         }
 
-        .nav-button:hover {
-            color: #AB98FF;
-        }
-
-        .nav-button:focus {
-            color: #64579F;
-        }
+        
     </style>
 
 
 </head>
 <body>
     <div class="container-fluid">
-
-
         <div class="container-fluid" id="landing-page">
             <h1 class="accent plaster mainTitle center space-above">Miranda</h1>
 
             <div class="d-flex justify-content-center">
                 <ul class="nav justify-content-center">
                     <li class="nav-item nav-menu">
-                        <button id="work" onClick="initPage(this.id)" class="nav-link neutral shipporimincho-bold nav-button">Portfolio</button>
+                        <button id="work" onClick="initPage(this.id)" class="nav-link neutral shipporimincho-bold nav-btn">Portfolio</button>
                         <!-- <a class="nav-link neutral shipporimincho-bold" href="#work">Work</a> -->
                     </li>
                     <li class="nav-border" style="border-right: 2px solid #51424E;"></li>
                     <li class="nav-item nav-menu">
-                        <button id="resume" onClick="initPage(this.id)" class="nav-link neutral shipporimincho-bold nav-button">Resume</button>
+                        <button id="resume" onClick="initPage(this.id)" class="nav-link neutral shipporimincho-bold nav-btn">Resume</button>
                         <!-- <a class="nav-link neutral shipporimincho-bold" href="#about">Resume</a> -->
                     </li>
                     <li class="nav-border" style="border-right: 2px solid #51424E;"></li>
                     <li class="nav-item nav-menu">
-                        <button id="contact" onClick="initPage(this.id)" class="nav-link neutral shipporimincho-bold nav-button">Contact</button>
+                        <button id="contact" onClick="initPage(this.id)" class="nav-link neutral shipporimincho-bold nav-btn">Contact</button>
                         <!-- <a class="nav-link neutral shipporimincho-bold" href="#contact">Contact</a> -->
                     </li>
                 </ul>
@@ -253,17 +237,17 @@
             <div class="d-flex justify-content-end" style="margin:1em 1em 0 0;">
                 <ul class="nav justify-content-center">
                     <li class="nav-item nav-menu">
-                        <button id="work-1" onclick="nextPage(this.id)" class="nav-link neutral shipporimincho-bold nav-button">Portfolio</button>
+                        <button id="work-1" onclick="nextPage(this.id)" class="nav-link neutral shipporimincho-bold nav-btn">Portfolio</button>
                         <!-- <a class="nav-link neutral shipporimincho-bold" href="#work">Work</a> -->
                     </li>
                     <li class="nav-border" style="border-right: 2px solid #51424E;"></li>
                     <li class="nav-item nav-menu">
-                        <button id="resume-1" onclick="nextPage(this.id)" class="nav-link neutral shipporimincho-bold nav-button">Resume</button>
+                        <button id="resume-1" onclick="nextPage(this.id)" class="nav-link neutral shipporimincho-bold nav-btn">Resume</button>
                         <!-- <a class="nav-link neutral shipporimincho-bold" href="#about">Resume</a> -->
                     </li>
                     <li class="nav-border" style="border-right: 2px solid #51424E;"></li>
                     <li class="nav-item nav-menu">
-                        <button id="contact-1" onclick="nextPage(this.id)" class="nav-link neutral shipporimincho-bold nav-button">Contact</button>
+                        <button id="contact-1" onclick="nextPage(this.id)" class="nav-link neutral shipporimincho-bold nav-btn">Contact</button>
                         <!-- <a class="nav-link neutral shipporimincho-bold" href="#contact">Contact</a> -->
                     </li>
                 </ul>
@@ -273,66 +257,148 @@
 
         <div id="work-page" class="container-fluid hide">
             <h2 class="plaster neutral center" style="font-size:48px;">Portfolio</h2>
+            <div id="port01" style="border: 4px solid #51424E;border-radius: 5px; padding:1em; background-color:white;" class="container-fluid clearfix space-above hide">
+                <img class="col-md-6 float-md-end mb-3 ms-md-3" style="border: 4px solid #51424E; border-radius: 5px;" src="imgs/inspire-flyer.png" alt="Inspire Welcome Week flyer that shows times and dates for events to welcome new students." />
+                <h3 class="space-above">Inspire Welcome Week Flyer</h3>
+                <p>My client was a student at Indiana University who needed a flyer for their welcome week before school started. They wanted a flyer that was easy to read and was pleasing to the eye.</p>
+            </div>
+            <div id="port02" style="border: 4px solid #51424E;border-radius: 5px; padding:1em; background-color:white;" class="container-fluid clearfix space-above hide">
+                <img class="col-md-6 float-md-end mb-3 ms-md-3" style="border: 4px solid #51424E; border-radius: 5px;" src="imgs/inspire-flyer.png" alt="Inspire Welcome Week flyer that shows times and dates for events to welcome new students." />
+                <h3 class="space-above">Whitney's Wings Redesign</h3>
+                <p>My client was a pageant contestant that wanted to a website for her charity foundation.</p>
+            </div>
+            <div id="port03" style="border: 4px solid #51424E;border-radius: 5px; padding:1em; background-color:white;" class="container-fluid clearfix space-above hide">
+                <img class="col-md-6 float-md-end mb-3 ms-md-3" style="border: 4px solid #51424E; border-radius: 5px;" src="imgs/inspire-flyer.png" alt="Inspire Welcome Week flyer that shows times and dates for events to welcome new students." />
+                <h3 class="space-above">Mitchell E. Daniels Jr., School of Business Mockups and Redesigns</h3>
+                <p>The marketing and communications team at the Mitchell E. Daniels Jr., School of Business had many duties, I was a part of the web team so I dealt mainly with updating the site using our ticket system and ensuring our many pages are accessible for all users.</p>
+                <p>I was fortunate to be employed at a time when the business school underwent a name and design change so I was given a few projects to redesign current pages to fit a newer and sleeker concept.</p>
+            </div>
+
             <div id="portfolio-container" class="container-fluid space-above">
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                        <div class="card h-100" style="border: 4px solid #51424E;padding:1em;">
-                            <img src="imgs/flyer-mockup.jpg" class="card-img-top" alt="Mockup photo of a flyer designed in Figma.">
-                            <div class="card-body">
-                                <h5 class="card-title">Flyer Mockup</h5>
-                                <p class="card-text">This is a redesign of a flyer I had made previously for my client's club at Indiana University.</p>
-                                <button class="btn btn-primary neutral-bg">READ MORE</button>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <button id="btn-work-exp" onclick="changeTab(this.id)" class="nav-link neutral shipporimincho-bold nav-btn active"><h3>Work Experience</h3></button>
+                    </li>
+                    <li class="nav-border" style="border-right: 2px solid #51424E;"></li>
+                    <li class="nav-item">
+                        <button id="btn-per-proj" onclick="changeTab(this.id)" class="nav-link neutral shipporimincho-bold nav-btn"><h3>Personal Projects</h3></button>
+                    </li>
+                </ul>
+                <div class="space-above">
+                    <div class="row row-cols-1 row-cols-md-3 g-4" id="work-experience">
+                        <div class="col">
+                            <div class="card h-100" style="border: 4px solid #51424E;padding:1em;">
+                                <img src="imgs/flyer-mockup.jpg" class="card-img-top" alt="Mockup photo of a flyer designed in Figma.">
+                                <div class="card-body">
+                                    <h5 class="card-title">Flyer Mockup</h5>
+                                    <p class="card-text">This is a redesign of a flyer I had made previously for my client's club at Indiana University.</p>
+                                    <button id="btn-port01" onclick="loadPortfolio(this.id)" class="btn btn-primary neutral-bg btn-portfolio">READ MORE</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100" style="border: 4px solid #51424E;padding:1em;">
+                                <img src="imgs/ww-mockup.jpg" class="card-img-top" alt="Mockup photo of a flyer designed in Figma.">
+                                <div class="card-body">
+                                    <h5 class="card-title">Whitney's Wings Redesign</h5>
+                                    <p class="card-text">I was a senior in high school when I took on this project which unfortunately, I never finished due to the pandemic so this is a rework to fit my current abilities and skillset.</p>
+                                    <button id="btn-port02" onclick="loadPortfolio(this.id)" class="btn btn-primary neutral-bg btn-portfolio">READ MORE</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100" style="border: 4px solid #51424E;padding:1em;">
+                                <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mitchell E. Daniels Jr., School of Business Mockups and Redesigns</h5>
+                                    <p class="card-text">A few examples of my duties at Mitchell E. Daniels Jr., School of Business as a part of the Marketing and Communications team.</p>
+                                    <button id="btn-port03" onclick="loadPortfolio(this.id)" class="btn btn-primary neutral-bg btn-portfolio">READ MORE</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card h-100" style="border: 4px solid #51424E;padding:1em;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Whitney's Wings Redesign</h5>
-                                <p class="card-text">I was a senior in high school when I took on this project which unfortunately, I never finished due to the pandemic so this is a rework to fit my current abilities and skillset.</p>
+
+                    <div class="row row-cols-1 row-cols-md-3 g-4 hide" id="personal-projects">
+                        <div class="col">
+                            <div class="card h-100" style="border: 4px solid #51424E;padding:1em;">
+                                <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">This Website</h5>
+                                    <p class="card-text">...</p>
+                                    <button id="btn-proj01" onclick="loadPortfolio(this.id)" class="btn btn-primary neutral-bg btn-portfolio">READ MORE</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100" style="border: 4px solid #51424E;padding:1em;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Mitchell E. Daniels Jr., School of Business Mockups and Applications</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                        <div class="col">
+                            <div class="card h-100" style="border: 4px solid #51424E;padding:1em;">
+                                <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Javascript Project</h5>
+                                    <p class="card-text">...</p>
+                                    <button id="btn-proj02" onclick="loadPortfolio(this.id)" class="btn btn-primary neutral-bg btn-portfolio">READ MORE</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100" style="border: 4px solid #51424E;padding:1em;">
+                                <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">TBD</h5>
+                                    <p class="card-text">...</p>
+                                    <button id="btn-proj03" onclick="loadPortfolio(this.id)" class="btn btn-primary neutral-bg btn-portfolio">READ MORE</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
+
 
         </div>
         <div id="resume-page" class="container-fluid hide space-above">
             <div class="mobile-view">
                 <div style="border: 4px solid #51424E; border-radius: 5px; margin: auto; padding: 2em 1em 1em 1em;">
-                    <h2 class="plaster neutral">About</h2>
-                    <p class="space-above">Frontend Web Developer with 8 years of designing and coding websites using CSS and HTML. Open-minded and a quick learner, able to pick up new coding languages and software.</p>
+                    <h2 class="plaster neutral">Career Objective</h2>
+                    <p class="space-above">
+                        Frontend web developer focused on creating responsive, accessible, and
+                        visually engaging websites using HTML, CSS, and JavaScript. Experienced
+                        in taking projects from concept to launch, with a strong understanding of
+                        user-centered design principles.
+                    </p>
                 </div>
 
                 <div style="border: 4px solid #51424E; border-radius: 5px; margin: auto; margin-top: 1em; padding: 1em;">
                     <ul class="shipporimincho-bold neutral" style="list-style-type:none;margin:.5em 0 0 0;padding:0;">
                         <li style="margin-bottom:5px;"><i class="fa fa-user"></i> Miranda Pyles</li>
                         <li style="margin-bottom:5px;"><i class="fa fa-briefcase"></i> Frontend Web Developer</li>
-                        <li style="margin-bottom:5px;"><i class="fa fa-map"></i> Based in Dallas, TX</li>
-                        <li><i class="fa fa-envelope"></i> mpyles2013@gmail.com</li>
+                        <li style="margin-bottom:5px;"><i class="fa fa-envelope"></i> mpyles2013@gmail.com</li>
+                        <li ><i class="fa fa-map"></i> Dallas, TX</li>
                     </ul>
-                    <h3 class="shipporimincho-bold neutral" style="margin-top:.5em;">Skills/Softwares</h3>
-                    <ul class="neutral">
+                    <h3 class="shipporimincho-bold neutral" style="margin-top:.5em;">Skills</h3>
+                    <ul style="list-style-type: none; padding:.5em;" class="neutral">
+                        <li class="shipporimincho-bold" style="font-size:18px;">Programming Languages</li>
                         <li>HTML5</li>
                         <li>CSS</li>
                         <li>PHP</li>
+                        <li>React</li>
                         <li>JavaScript</li>
+                        <li>C++</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li class="shipporimincho-bold space-above" style="font-size:18px;">Software</li>
                         <li>Adobe Photoshop</li>
                         <li>Adobe Illustrator</li>
                         <li>Adobe Dreamweaver</li>
                         <li>Figma</li>
                         <li>Cascade CMS</li>
                         <li>Visual Studios</li>
+                        <li>Blender</li>
+                        <li>Maya</li>
+                        <li>Unreal Engine 5</li>
+                        <li>Excel</li>
+                        <li>Powerpoint</li>
+                        <li>Word</li>
                     </ul>
                     <div class="d-flex justify-content-center">
                         <div><a href="https://www.linkedin.com/in/miranda-pyles/"><svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#51424E" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" /></svg><span class="sr-only">Miranda Pyles' LinkedIn</span></a></div>
@@ -343,27 +409,28 @@
                 <div style="border: 4px solid #51424E; border-radius: 5px; margin: auto; margin-top: 1em; padding: 2em 1em 1em 1em; ">
                     <h2 class="plaster neutral">Work Experience</h2>
                     <p><span class="shipporimincho-bold" style="font-size:20px;">Mitchell E. Daniels Jr., School of Business</span><br>02/2022 - 05/2024</p>
-                    <p class="shipporimincho-bold" style="font-size:20px;margin-bottom:0;">Intern Web Developer</p>
+                    <p class="shipporimincho-bold" style="font-size:20px;margin-bottom:0;">Undergraduate Web Developer</p>
                     <ul style="margin:0;">
-                        <li>Overhauled old designs to fit a newer concept</li>
-                        <li>Communicated with clients to resolve their issues</li>
-                        <li>Maintained the website with current news and information</li>
+                        <li>Resolved 300+ support tickets, including requests for content updates, design changes, and technical troubleshooting</li>
+                        <li>Communicated directly with clients to resolve design issues and clarify web content</li>
+                        <li>Ensured web pages met performance, accessibility (WCAG/ARIA), and SEO best practices for all users</li>
+                        <li>Overhauled outdated website designs to align with modern UI/UX standards and improve user engagement</li>
                     </ul>
 
                     <p class="space-above"><span class="shipporimincho-bold" style="font-size:20px;">Whitney's Wings</span><br>03/2020 - 05/2020</p>
-                    <p class="shipporimincho-bold" style="font-size:20px;margin-bottom:0;">Volunteer Web Developer</p>
+                    <p class="shipporimincho-bold" style="font-size:20px;margin-bottom:0;">Web Designer</p>
                     <ul style="margin:0;">
-                        <li>Collaborated with client to conceptualize their idea</li>
-                        <li>Prototyped concepts using Figma</li>
-                        <li>Coded the site using Dreamweaver</li>
+                        <li>Collaborated with client to translate project vision into actionable design goals</li>
+                        <li>Prototyped interactive concepts using Figma to align with client expectations</li>
+                        <li>Developed and deployed final website using Dreamweaver, ensuring clean and maintainable code</li>
                     </ul>
 
                     <p class="space-above"><span class="shipporimincho-bold" style="font-size:20px;">Floyd Central High School</span><br>08/2017 - 05/2020</p>
-                    <p class="shipporimincho-bold" style="font-size:20px;margin-bottom:0;">Student Webmaster</p>
+                    <p class="shipporimincho-bold" style="font-size:20px;margin-bottom:0;">Junior Web Developer</p>
                     <ul style="margin:0;">
-                        <li>Updated school website using WordPress</li>
-                        <li>Designed the home page for the web design class</li>
-                        <li>Built website content and designs using HTML and CSS</li>
+                        <li>Maintained school website using Wordpress</li>
+                        <li>Designed, coded, and implemented the home page of the web design course using Dreamweaver and Bluehost</li>
+                        <li>Assisted other students with any technical issues</li>
                     </ul>
 
                 </div>
@@ -388,21 +455,33 @@
                                 <ul class="shipporimincho-bold neutral" style="list-style-type:none;margin:.5em 0 0 0;padding:0;">
                                     <li style="margin-bottom:5px;"><i class="fa fa-user"></i> Miranda Pyles</li>
                                     <li style="margin-bottom:5px;"><i class="fa fa-briefcase"></i> Frontend Web Developer</li>
-                                    <li style="margin-bottom:5px;"><i class="fa fa-map"></i> Based in Dallas, TX</li>
-                                    <li><i class="fa fa-envelope"></i> mpyles2013@gmail.com</li>
+                                    <li style="margin-bottom:5px;"><i class="fa fa-envelope"></i> mpyles2013@gmail.com</li>
+                                    <li><i class="fa fa-map"></i> Dallas, TX</li>
                                 </ul>
-                                <h3 class="shipporimincho-bold neutral" style="margin-top:.5em;">Skills/Softwares</h3>
-                                <ul class="neutral">
+                                <h3 class="shipporimincho-bold neutral" style="margin-top:.5em;">Skills</h3>
+                                <ul style="list-style-type: none; padding:.5em;" class="neutral">
+                                    <li class="shipporimincho-bold" style="font-size:18px;">Programming Languages</li>
                                     <li>HTML5</li>
                                     <li>CSS</li>
                                     <li>PHP</li>
+                                    <li>React</li>
                                     <li>JavaScript</li>
+                                    <li>C++</li>
+                                    <li>Python</li>
+                                    <li>Java</li>
+                                    <li class="shipporimincho-bold space-above" style="font-size:18px;">Software</li>
                                     <li>Adobe Photoshop</li>
                                     <li>Adobe Illustrator</li>
                                     <li>Adobe Dreamweaver</li>
                                     <li>Figma</li>
                                     <li>Cascade CMS</li>
                                     <li>Visual Studios</li>
+                                    <li>Blender</li>
+                                    <li>Maya</li>
+                                    <li>Unreal Engine 5</li>
+                                    <li>Excel</li>
+                                    <li>Powerpoint</li>
+                                    <li>Word</li>
                                 </ul>
                                 <div class="d-flex justify-content-center">
                                     <div><a href="https://www.linkedin.com/in/miranda-pyles/"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#51424E" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" /></svg><span class="sr-only">Miranda Pyles' LinkedIn</span></a></div>
@@ -413,8 +492,13 @@
 
                         <div class="d-flex flex-grow-1 flex-column">
                             <div style="border: 4px solid #51424E; border-radius: 5px; margin: 1em 2em 0 2em; padding: 2em 1em 1em 1em;">
-                                <h2 class="plaster neutral">About</h2>
-                                <p class="space-above" style="font-size:16px;">Frontend Web Developer with 8 years of designing and coding websites using CSS and HTML. Open-minded and a quick learner, able to pick up new coding languages and software.</p>
+                                <h2 class="plaster neutral">Career Objective</h2>
+                                <p class="space-above" style="font-size:16px;">
+                                    Frontend web developer focused on creating responsive, accessible, and
+                                    visually engaging websites using HTML, CSS, and JavaScript. Experienced
+                                    in taking projects from concept to launch, with a strong understanding of
+                                    user-centered design principles.
+                                </p>
 
                             </div>
                             <div style="border: 4px solid #51424E; border-radius: 5px; margin: 2em 2em 0 2em; padding: 2em 1em 1em 1em; ">
@@ -428,11 +512,12 @@
                                         </div>
                                         <div class="col-sm-6 jobDetails">
                                             <div class="content">
-                                                <p class="shipporimincho-bold" style="font-size:20px;margin-bottom:0;">Intern Web Developer</p>
+                                                <p class="shipporimincho-bold" style="font-size:20px;margin-bottom:0;">Undergraduate Web Developer</p>
                                                 <ul style="margin:0;">
-                                                    <li>Overhauled old designs to fit a newer concept</li>
-                                                    <li>Communicated with clients to resolve their issues</li>
-                                                    <li>Maintained the website with current news and information</li>
+                                                    <li>Resolved 300+ support tickets, including requests for content updates, design changes, and technical troubleshooting</li>
+                                                    <li>Communicated directly with clients to resolve design issues and clarify web content</li>
+                                                    <li>Ensured web pages met performance, accessibility (WCAG/ARIA), and SEO best practices for all users</li>
+                                                    <li>Overhauled outdated website designs to align with modern UI/UX standards and improve user engagement</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -445,11 +530,11 @@
                                         </div>
                                         <div class="col-sm-6 jobDetails">
                                             <div class="content">
-                                                <p class="shipporimincho-bold" style="font-size: 20px; margin-bottom: 0;">Volunteer Web Developer</p>
+                                                <p class="shipporimincho-bold" style="font-size: 20px; margin-bottom: 0;">Web Designer</p>
                                                 <ul style="margin:0;">
-                                                    <li>Collaborated with client to conceptualize their idea</li>
-                                                    <li>Prototyped concepts using Figma</li>
-                                                    <li>Coded the site using Dreamweaver</li>
+                                                    <li>Collaborated with client to translate project vision into actionable design goals</li>
+                                                    <li>Prototyped interactive concepts using Figma to align with client expectations</li>
+                                                    <li>Developed and deployed final website using Dreamweaver, ensuring clean and maintainable code</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -462,11 +547,11 @@
                                         </div>
                                         <div class="col-sm-6 jobDetails">
                                             <div class="content">
-                                                <p class="shipporimincho-bold" style="font-size: 20px; margin-bottom: 0;">Student Webmaster</p>
+                                                <p class="shipporimincho-bold" style="font-size: 20px; margin-bottom: 0;">Junior Web Developer</p>
                                                 <ul style="margin:0;">
-                                                    <li>Updated school website using WordPress</li>
-                                                    <li>Designed the home page for the web design class</li>
-                                                    <li>Built website content and designs using HTML and CSS</li>
+                                                    <li>Maintained school website using Wordpress</li>
+                                                    <li>Designed, coded, and implemented the home page of the web design course using Dreamweaver and Bluehost</li>
+                                                    <li>Assisted other students with any technical issues</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -513,7 +598,7 @@
                         <textarea class="form-control" id="message" style="background-color: #FBF4D7; border: 1px solid #51424E; height:150px; " name="message" placeholder="Message goes here" required></textarea>
                         <label class="neutral" for="message">Message</label>
                     </div>
-                    <button type="submit" style="font-size: 24px; margin-top: 1em; color: #FBF4D7; border:none;" class="btn btn-primary neutral-bg plaster" name="">SEND</button>
+                    <button type="submit" style="font-size: 24px; margin-top: 1em;" class="btn btn-primary neutral-bg plaster btn-form" name="">SEND</button>
                 </form>
             </div>
         </div>
@@ -525,6 +610,8 @@
     <script type="text/javascript">
         var button;
         var currentPage;
+        var currentPortfolioPage;
+
 
         function initPage(clickedID) {
             button = clickedID;
@@ -547,6 +634,27 @@
             button = clickedID;
             document.getElementById(currentPage).classList.toggle("hide");
             if (button == "work-1") {
+                if (currentPage != "work-page" && document.getElementById("portfolio-container").classList.contains("hide")) {
+                    document.getElementById("portfolio-container").classList.toggle("hide");
+                    if (currentPortfolioPage == "port01") {
+                        document.getElementById("port01").classList.toggle("hide");
+                    } else if (currentPortfolioPage == "port02") {
+                        document.getElementById("port02").classList.toggle("hide");
+                    } else if (currentPortfolioPage == "port03") {
+                        document.getElementById("port03").classList.toggle("hide");
+                    }
+                    
+                } else if (currentPage == "work-page" && document.getElementById("portfolio-container").classList.contains("hide")) {
+                    document.getElementById("portfolio-container").classList.toggle("hide");
+                    if (currentPortfolioPage == "port01") {
+                        document.getElementById("port01").classList.toggle("hide");
+                    } else if (currentPortfolioPage == "port02") {
+                        document.getElementById("port02").classList.toggle("hide");
+                    } else if (currentPortfolioPage == "port03") {
+                        document.getElementById("port03").classList.toggle("hide");
+                    }
+                    
+                }
                 document.getElementById("work-page").classList.toggle("hide");
                 currentPage = "work-page";
             } else if (button == "resume-1") {
@@ -555,6 +663,36 @@
             } else if (button == "contact-1") {
                 document.getElementById("contact-page").classList.toggle("hide");
                 currentPage = "contact-page";
+            }
+        }
+
+        function loadPortfolio(clickedID) {
+            button = clickedID;
+            document.getElementById("portfolio-container").classList.toggle("hide");
+            if (button == "btn-port01") {
+                document.getElementById("port01").classList.toggle("hide");
+                currentPortfolioPage = "port01";
+            } else if (button == "btn-port02") {
+                document.getElementById("port02").classList.toggle("hide");
+                currentPortfolioPage = "port02";
+            } else if (button == "btn-port03") {
+                document.getElementById("port03").classList.toggle("hide");
+                currentPortfolioPage = "port03";
+            }
+        }
+
+        function changeTab(clickedID) {
+            button = clickedID;
+            if (button == "btn-work-exp" && document.getElementById("work-experience").classList.contains("hide")) {
+                document.getElementById("btn-per-proj").classList.toggle("active");
+                document.getElementById("btn-work-exp").classList.toggle("active");
+                document.getElementById("personal-projects").classList.toggle("hide");
+                document.getElementById("work-experience").classList.toggle("hide");
+            } else if (button == "btn-per-proj" && document.getElementById("personal-projects").classList.contains("hide")) {
+                document.getElementById("btn-work-exp").classList.toggle("active");
+                document.getElementById("btn-per-proj").classList.toggle("active");
+                document.getElementById("work-experience").classList.toggle("hide");
+                document.getElementById("personal-projects").classList.toggle("hide");
             }
         }
     </script>
