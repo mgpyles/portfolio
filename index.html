@@ -103,7 +103,6 @@
 
             #portfolio-container{
                 width:75%;
-                display:block;
                 margin:auto;
                 margin-top:1.5em;
             }
@@ -197,6 +196,11 @@
             background-color: transparent !important;
         }
 
+        .card-footer{
+            background-color:inherit;
+            border:none;
+        }
+
         
     </style>
 
@@ -210,17 +214,17 @@
             <div class="d-flex justify-content-center">
                 <ul class="nav justify-content-center">
                     <li class="nav-item nav-menu">
-                        <button id="work" onClick="initPage(this.id)" class="nav-link neutral shipporimincho-bold nav-btn">Portfolio</button>
+                        <button id="work" onClick="initPage(event, 'work-page')" class="nav-link neutral shipporimincho-bold navbtn">Portfolio</button>
                         <!-- <a class="nav-link neutral shipporimincho-bold" href="#work">Work</a> -->
                     </li>
                     <li class="nav-border" style="border-right: 2px solid #51424E;"></li>
                     <li class="nav-item nav-menu">
-                        <button id="resume" onClick="initPage(this.id)" class="nav-link neutral shipporimincho-bold nav-btn">Resume</button>
+                        <button id="resume" onClick="initPage(event, 'resume-page')" class="nav-link neutral shipporimincho-bold navbtn">Resume</button>
                         <!-- <a class="nav-link neutral shipporimincho-bold" href="#about">Resume</a> -->
                     </li>
                     <li class="nav-border" style="border-right: 2px solid #51424E;"></li>
                     <li class="nav-item nav-menu">
-                        <button id="contact" onClick="initPage(this.id)" class="nav-link neutral shipporimincho-bold nav-btn">Contact</button>
+                        <button id="contact" onClick="initPage(event, 'contact-page')" class="nav-link neutral shipporimincho-bold navbtn">Contact</button>
                         <!-- <a class="nav-link neutral shipporimincho-bold" href="#contact">Contact</a> -->
                     </li>
                 </ul>
@@ -237,17 +241,17 @@
             <div class="d-flex justify-content-end" style="margin:1em 1em 0 0;">
                 <ul class="nav justify-content-center">
                     <li class="nav-item nav-menu">
-                        <button id="work-1" onclick="nextPage(this.id)" class="nav-link neutral shipporimincho-bold nav-btn">Portfolio</button>
+                        <button id="work-1" onclick="nextPage('work-page')" class="nav-link neutral shipporimincho-bold navbtn">Portfolio</button>
                         <!-- <a class="nav-link neutral shipporimincho-bold" href="#work">Work</a> -->
                     </li>
                     <li class="nav-border" style="border-right: 2px solid #51424E;"></li>
                     <li class="nav-item nav-menu">
-                        <button id="resume-1" onclick="nextPage(this.id)" class="nav-link neutral shipporimincho-bold nav-btn">Resume</button>
+                        <button id="resume-1" onclick="nextPage('resume-page')" class="nav-link neutral shipporimincho-bold navbtn">Resume</button>
                         <!-- <a class="nav-link neutral shipporimincho-bold" href="#about">Resume</a> -->
                     </li>
                     <li class="nav-border" style="border-right: 2px solid #51424E;"></li>
                     <li class="nav-item nav-menu">
-                        <button id="contact-1" onclick="nextPage(this.id)" class="nav-link neutral shipporimincho-bold nav-btn">Contact</button>
+                        <button id="contact-1" onclick="nextPage('contact-page')" class="nav-link neutral shipporimincho-bold navbtn">Contact</button>
                         <!-- <a class="nav-link neutral shipporimincho-bold" href="#contact">Contact</a> -->
                     </li>
                 </ul>
@@ -255,44 +259,79 @@
         </div>
 
 
-        <div id="work-page" class="container-fluid hide">
+        <div id="work-page" class="page container-fluid hide">
             <h2 class="plaster neutral center" style="font-size:48px;">Portfolio</h2>
             <div id="port01" style="border: 4px solid #51424E;border-radius: 5px; padding:1em; background-color:white;" class="container-fluid clearfix space-above hide">
+                <h3 class="space-above">Mitchell E. Daniels Jr., School of Business Mockups and Redesigns</h3>
+                <p>At the Mitchell E. Daniels, Jr. School of Business, the Marketing and Communications team managed a wide range of responsibilities. As a member of the web team, my primary focus was maintaining and updating the website through our ticketing system, while ensuring all pages remained accessible and user-friendly for a diverse audience.</p>
+                <p>I had the opportunity to be part of the team during a pivotal time, as the school underwent both a name change and a major design overhaul. This allowed me to contribute to several redesign projects, adapting existing pages to align with the updated, modernized visual identity.</p>
+                <p>My day-to-day responsibilities involved managing requests submitted through our ticketing platform, Footprints, which converted client emails into actionable tickets. I would claim tickets and handle a variety of tasks—ranging from updating text and images to designing new pages and implementing full-page redesigns. While the bulk of my work involved updating content and images, I also took on several redesigns and new page builds, which gave me the opportunity to work more creatively and collaboratively.</p>
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'studyAbroad')" id="defaultOpen">Study Abroad Programs</button>
+                    <button class="tablinks" onclick="openTab(event, 'caseComp')">Case Competition</button>
+                    <button class="tablinks" onclick="openTab(event, 'advisGroup')">Advisory Group</button>
+                </div>
+                <iframe id="page-preview" class="space-above" style="border: 4px solid #51424E; border-radius: 5px;" src="https://business.purdue.edu/undergraduate/study-abroad/short-term-programs/france/strasbourg-winter-flex.php" title="Mitch Daniels School of Business' study abroad program, specifically the Strasbourg, France page."></iframe>
+                <!-- Tab content -->
+                <div id="studyAbroad" class="tabcontent">
+                    <h3>Study Abroad Programs</h3>
+                    <p>One of the first projects I undertook after joining the business school was designing a standardized layout for all short-term program pages — a layout that is still in use today. I was given creative freedom to develop the structure, with a focus on creating a user-friendly and visually engaging experience.</p>
+                    <p>My concept featured a hero banner showcasing the destination city, giving prospective students a visual preview of the study abroad experience. I kept the program details clear and concise to ensure easy readability. The web team had developed a library of prebuilt CSS components within the Cascade CMS, which I used extensively throughout the page. However, for the “Important Dates” section, I wanted a distinct visual style that wasn’t available in the existing components. To achieve this, I custom-coded that section to match my vision. This page also includes a unique itinerary dropdown feature that I designed.</p>
+                </div>
+                <div id="caseComp" class="tabcontent">
+                    <h3>Case Competition</h3>
+                    <p>This ticket requested the creation of a new webpage to serve as the homepage for a case competition. The goal was to provide a central location where interested parties could access key information about the event. I was provided with a general outline of the desired content, and from there, I developed the layout through iterative design and testing. I focused on creating a clean, user-friendly design that emphasized clarity and ease of navigation.</p>
+                </div>
+                <div id="advisGroup" class="tabcontent">
+                    <h3>Advisory Group</h3>
+                    <p>Often, I’m provided with content and tasked with creating a design that presents the information clearly and engagingly — avoiding a text-heavy layout. For this particular project, I was asked to design a biography page that displayed detailed information in a clean and visually appealing way. I chose to use interactive flip cards to present each biography, as this format allowed for a more compact, organized layout that maintained readability while accommodating the longer text.</p>
+                </div>
+            </div>
+            <div id="port02" style="border: 4px solid #51424E;border-radius: 5px; padding:1em; background-color:white;" class="container-fluid clearfix space-above hide">
                 <img class="col-md-6 float-md-end mb-3 ms-md-3" style="border: 4px solid #51424E; border-radius: 5px;" src="imgs/inspire-flyer.png" alt="Inspire Welcome Week flyer that shows times and dates for events to welcome new students." />
                 <h3 class="space-above">Inspire Welcome Week Flyer</h3>
                 <p>My client was a student at Indiana University who needed a flyer for their welcome week before school started. They wanted a flyer that was easy to read and was pleasing to the eye.</p>
             </div>
-            <div id="port02" style="border: 4px solid #51424E;border-radius: 5px; padding:1em; background-color:white;" class="container-fluid clearfix space-above hide">
-                <img class="col-md-6 float-md-end mb-3 ms-md-3" style="border: 4px solid #51424E; border-radius: 5px;" src="imgs/inspire-flyer.png" alt="Inspire Welcome Week flyer that shows times and dates for events to welcome new students." />
-                <h3 class="space-above">Whitney's Wings Redesign</h3>
-                <p>My client was a pageant contestant that wanted to a website for her charity foundation.</p>
-            </div>
             <div id="port03" style="border: 4px solid #51424E;border-radius: 5px; padding:1em; background-color:white;" class="container-fluid clearfix space-above hide">
-                <img class="col-md-6 float-md-end mb-3 ms-md-3" style="border: 4px solid #51424E; border-radius: 5px;" src="imgs/inspire-flyer.png" alt="Inspire Welcome Week flyer that shows times and dates for events to welcome new students." />
-                <h3 class="space-above">Mitchell E. Daniels Jr., School of Business Mockups and Redesigns</h3>
-                <p>The marketing and communications team at the Mitchell E. Daniels Jr., School of Business had many duties, I was a part of the web team so I dealt mainly with updating the site using our ticket system and ensuring our many pages are accessible for all users.</p>
-                <p>I was fortunate to be employed at a time when the business school underwent a name and design change so I was given a few projects to redesign current pages to fit a newer and sleeker concept.</p>
+                <img class="col-md-6 float-md-end mb-3 ms-md-3" style="border: 4px solid #51424E; border-radius: 5px;" src="..." alt="..." />
+                <h3 class="space-above">Whitney's Wings Redesign</h3>
+                <p>My client was a pageant contestant that wanted a website for her charity foundation.</p>
             </div>
+            
 
             <div id="portfolio-container" class="container-fluid space-above">
                 <ul class="nav">
                     <li class="nav-item">
-                        <button id="btn-work-exp" onclick="changeTab(this.id)" class="nav-link neutral shipporimincho-bold nav-btn active"><h3>Work Experience</h3></button>
+                        <button onclick="changeTab(event, 'work-experience')" class="nav-link neutral shipporimincho-bold navbtn active"><h3>Work Experience</h3></button>
                     </li>
                     <li class="nav-border" style="border-right: 2px solid #51424E;"></li>
                     <li class="nav-item">
-                        <button id="btn-per-proj" onclick="changeTab(this.id)" class="nav-link neutral shipporimincho-bold nav-btn"><h3>Personal Projects</h3></button>
+                        <button onclick="changeTab(event, 'personal-projects')" class="nav-link neutral shipporimincho-bold navbtn"><h3>Personal Projects</h3></button>
                     </li>
                 </ul>
                 <div class="space-above">
                     <div class="row row-cols-1 row-cols-md-3 g-4" id="work-experience">
                         <div class="col">
                             <div class="card h-100" style="border: 4px solid #51424E;padding:1em;">
+                                <img src="imgs/mdsb-mockup.jpg" class="card-img-top" alt="Mockup photo of a Mitch Daniels School of Business page, specifically the study abroad page.">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mitchell E. Daniels Jr., School of Business Mockups and Redesigns</h5>
+                                    <p class="card-text">A few examples of my duties at Mitchell E. Daniels Jr., School of Business as a part of the Marketing and Communications team.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <button id="btn-port01" onclick="loadPortfolio('port01')" class="btn btn-primary neutral-bg btn-portfolio">READ MORE</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100" style="border: 4px solid #51424E;padding:1em;">
                                 <img src="imgs/flyer-mockup.jpg" class="card-img-top" alt="Mockup photo of a flyer designed in Figma.">
                                 <div class="card-body">
                                     <h5 class="card-title">Flyer Mockup</h5>
                                     <p class="card-text">This is a redesign of a flyer I had made previously for my client's club at Indiana University.</p>
-                                    <button id="btn-port01" onclick="loadPortfolio(this.id)" class="btn btn-primary neutral-bg btn-portfolio">READ MORE</button>
+                                </div>
+                                <div class="card-footer">
+                                    <button id="btn-port02" onclick="loadPortfolio('port02')" class="btn btn-primary neutral-bg btn-portfolio">READ MORE</button>
                                 </div>
                             </div>
                         </div>
@@ -302,17 +341,9 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Whitney's Wings Redesign</h5>
                                     <p class="card-text">I was a senior in high school when I took on this project which unfortunately, I never finished due to the pandemic so this is a rework to fit my current abilities and skillset.</p>
-                                    <button id="btn-port02" onclick="loadPortfolio(this.id)" class="btn btn-primary neutral-bg btn-portfolio">READ MORE</button>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100" style="border: 4px solid #51424E;padding:1em;">
-                                <img src="..." class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Mitchell E. Daniels Jr., School of Business Mockups and Redesigns</h5>
-                                    <p class="card-text">A few examples of my duties at Mitchell E. Daniels Jr., School of Business as a part of the Marketing and Communications team.</p>
-                                    <button id="btn-port03" onclick="loadPortfolio(this.id)" class="btn btn-primary neutral-bg btn-portfolio">READ MORE</button>
+                                <div class="card-footer">
+                                    <button id="btn-port03" onclick="loadPortfolio('port03')" class="btn btn-primary neutral-bg btn-portfolio">READ MORE</button>
                                 </div>
                             </div>
                         </div>
@@ -356,7 +387,7 @@
 
 
         </div>
-        <div id="resume-page" class="container-fluid hide space-above">
+        <div id="resume-page" class="page container-fluid hide space-above">
             <div class="mobile-view">
                 <div style="border: 4px solid #51424E; border-radius: 5px; margin: auto; padding: 2em 1em 1em 1em;">
                     <h2 class="plaster neutral">Career Objective</h2>
@@ -577,7 +608,7 @@
 
 
         </div>
-        <div id="contact-page" class="container-fluid hide space-above">
+        <div id="contact-page" class="page container-fluid hide space-above">
             <div id="form-container" class="d-flex flex-column mx-auto" style="border: 4px solid #51424E;padding:1em;">
                 <h2 class="plaster neutral" style="font-size:48px;">Contact</h2>
                 <form action="https://formcarry.com/s/D3-smjmMNRS" method="POST" enctype="multipart/form-data">
@@ -608,93 +639,75 @@
         </div>
     </div>
     <script type="text/javascript">
-        var button;
-        var currentPage;
-        var currentPortfolioPage;
+        var currentPage, currentPortfolioPage;
+        var currentTab = 'work-experience';
 
-
-        function initPage(clickedID) {
-            button = clickedID;
-            document.getElementById("landing-page").classList.toggle("hide");
+        function initPage(evt, goToPage) {
+            document.getElementById("landing-page").classList.add("hide");
             document.getElementById("nav").classList.toggle("hide");
             document.getElementById("main-footer").classList.toggle("hide");
-            if (button == "work") {
-                document.getElementById("work-page").classList.toggle("hide");
-                currentPage = "work-page";
-            } else if (button == "resume") {
-                document.getElementById("resume-page").classList.toggle("hide");
-                currentPage = "resume-page";
-            } else if (button == "contact") {
-                document.getElementById("contact-page").classList.toggle("hide");
-                currentPage = "contact-page";
-            }
+            document.getElementById(goToPage).classList.toggle("hide");
+            currentPage = goToPage;
         }
 
-        function nextPage(clickedID) {
-            button = clickedID;
+        function nextPage(goToPage) {
             document.getElementById(currentPage).classList.toggle("hide");
-            if (button == "work-1") {
-                if (currentPage != "work-page" && document.getElementById("portfolio-container").classList.contains("hide")) {
-                    document.getElementById("portfolio-container").classList.toggle("hide");
-                    if (currentPortfolioPage == "port01") {
-                        document.getElementById("port01").classList.toggle("hide");
-                    } else if (currentPortfolioPage == "port02") {
-                        document.getElementById("port02").classList.toggle("hide");
-                    } else if (currentPortfolioPage == "port03") {
-                        document.getElementById("port03").classList.toggle("hide");
-                    }
-                    
-                } else if (currentPage == "work-page" && document.getElementById("portfolio-container").classList.contains("hide")) {
-                    document.getElementById("portfolio-container").classList.toggle("hide");
-                    if (currentPortfolioPage == "port01") {
-                        document.getElementById("port01").classList.toggle("hide");
-                    } else if (currentPortfolioPage == "port02") {
-                        document.getElementById("port02").classList.toggle("hide");
-                    } else if (currentPortfolioPage == "port03") {
-                        document.getElementById("port03").classList.toggle("hide");
-                    }
-                    
-                }
-                document.getElementById("work-page").classList.toggle("hide");
-                currentPage = "work-page";
-            } else if (button == "resume-1") {
-                document.getElementById("resume-page").classList.toggle("hide");
-                currentPage = "resume-page";
-            } else if (button == "contact-1") {
-                document.getElementById("contact-page").classList.toggle("hide");
-                currentPage = "contact-page";
+            if (document.getElementById("portfolio-container").classList.contains("hide")) {
+                document.getElementById("portfolio-container").classList.toggle("hide");
+                document.getElementById(currentPortfolioPage).classList.toggle("hide");
             }
+            document.getElementById(goToPage).classList.toggle("hide");
+            currentPage = goToPage;
         }
 
-        function loadPortfolio(clickedID) {
-            button = clickedID;
+        function loadPortfolio(goToPort) {
             document.getElementById("portfolio-container").classList.toggle("hide");
-            if (button == "btn-port01") {
-                document.getElementById("port01").classList.toggle("hide");
-                currentPortfolioPage = "port01";
-            } else if (button == "btn-port02") {
-                document.getElementById("port02").classList.toggle("hide");
-                currentPortfolioPage = "port02";
-            } else if (button == "btn-port03") {
-                document.getElementById("port03").classList.toggle("hide");
-                currentPortfolioPage = "port03";
-            }
+            document.getElementById(goToPort).classList.toggle("hide");
+            currentPortfolioPage = goToPort;
         }
 
-        function changeTab(clickedID) {
-            button = clickedID;
-            if (button == "btn-work-exp" && document.getElementById("work-experience").classList.contains("hide")) {
-                document.getElementById("btn-per-proj").classList.toggle("active");
-                document.getElementById("btn-work-exp").classList.toggle("active");
-                document.getElementById("personal-projects").classList.toggle("hide");
-                document.getElementById("work-experience").classList.toggle("hide");
-            } else if (button == "btn-per-proj" && document.getElementById("personal-projects").classList.contains("hide")) {
-                document.getElementById("btn-work-exp").classList.toggle("active");
-                document.getElementById("btn-per-proj").classList.toggle("active");
-                document.getElementById("work-experience").classList.toggle("hide");
-                document.getElementById("personal-projects").classList.toggle("hide");
+        function changeTab(evt, goToTab) {
+            var i, navbtns;
+            navbtns = document.getElementsByClassName("navbtn");
+            for (i = 0; i < navbtns.length; i++) {
+                navbtns[i].className = navbtns[i].className.replace(" active", "");
             }
+            document.getElementById(currentTab).classList.toggle("hide");
+            document.getElementById(goToTab).classList.toggle("hide");
+            currentTab = goToTab;
+            evt.currentTarget.className += " active";
         }
+
+        function openTab(evt, contentName) {
+            var i, tabcontent, tablinks, pageUrl, pagePreview, desc;
+            pagePreview = document.getElementById("page-preview");
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(contentName).style.display = "block";
+            if (contentName == "studyAbroad") {
+                pageUrl = "https://business.purdue.edu/undergraduate/study-abroad/short-term-programs/france/strasbourg-winter-flex.php";
+                desc = "Mitch Daniels School of Business' study abroad program, specifically the Strasbourg, France page." ;
+            } else if (contentName == "caseComp") {
+                pageUrl = "https://www.business.purdue.edu/centers/communication-center/case-competitions/financial-management-research-challenge.php";
+                desc = "Mitch Daniels School of Business' Communication Center's case competition, Financial Management Research Challenge page.";
+            } else if (contentName == "advisGroup") {
+                pageUrl = "https://business.purdue.edu/military/advisory-group.php";
+                desc = "Mitch Daniels School of Business' military center's advisory group page.";
+            }
+            pagePreview.src = pageUrl;
+            pagePreview.title = desc;
+            evt.currentTarget.className += " active";
+        }
+
+        document.getElementById("defaultOpen").click();
     </script>
 </body>
 </html>
