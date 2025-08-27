@@ -77,6 +77,10 @@
                 font-size: 24px;
             }
 
+            .portfolionav{
+                font-size:20px;
+            }
+
             .mobile-view {
                 display: none;
             }
@@ -106,6 +110,11 @@
                 margin:auto;
                 margin-top:1.5em;
             }
+
+            .portpage{
+                width:75%;
+                margin:auto;
+            }
         }
 
         @media only screen and (max-width: 768px) {
@@ -129,6 +138,7 @@
             #work-page h2{
                 margin-top:.25em;
             }
+
         }
 
         #social-bar {
@@ -261,7 +271,7 @@
 
         <div id="work-page" class="page container-fluid hide">
             <h2 class="plaster neutral center" style="font-size:48px;">Portfolio</h2>
-            <div id="port01" style="border: 4px solid #51424E;border-radius: 5px; padding:1em; background-color:white;" class="container-fluid clearfix space-above hide">
+            <div id="port01" style="border: 4px solid #51424E;border-radius: 5px; padding:1em; background-color:white;" class="container-fluid clearfix portpage space-above hide">
                 <h3 class="space-above">Mitchell E. Daniels Jr., School of Business Mockups and Redesigns</h3>
                 <p>At the Mitchell E. Daniels, Jr. School of Business, the Marketing and Communications team managed a wide range of responsibilities. As a member of the web team, my primary focus was maintaining and updating the website through our ticketing system, while ensuring all pages remained accessible and user-friendly for a diverse audience.</p>
                 <p>I had the opportunity to be part of the team during a pivotal time, as the school underwent both a name change and a major design overhaul. This allowed me to contribute to several redesign projects, adapting existing pages to align with the updated, modernized visual identity.</p>
@@ -287,12 +297,12 @@
                     <p>Often, I’m provided with content and tasked with creating a design that presents the information clearly and engagingly — avoiding a text-heavy layout. For this particular project, I was asked to design a biography page that displayed detailed information in a clean and visually appealing way. I chose to use interactive flip cards to present each biography, as this format allowed for a more compact, organized layout that maintained readability while accommodating the longer text.</p>
                 </div>
             </div>
-            <div id="port02" style="border: 4px solid #51424E;border-radius: 5px; padding:1em; background-color:white;" class="container-fluid clearfix space-above hide">
+            <div id="port02" style="border: 4px solid #51424E;border-radius: 5px; padding:1em; background-color:white;" class="container-fluid clearfix portpage space-above hide">
                 <img class="col-md-6 float-md-end mb-3 ms-md-3" style="border: 4px solid #51424E; border-radius: 5px;" src="imgs/inspire-flyer.png" alt="Inspire Welcome Week flyer that shows times and dates for events to welcome new students." />
                 <h3 class="space-above">Inspire Welcome Week Flyer</h3>
                 <p>My client was a student at Indiana University who needed a flyer for their welcome week before school started. They wanted a flyer that was easy to read and was pleasing to the eye.</p>
             </div>
-            <div id="port03" style="border: 4px solid #51424E;border-radius: 5px; padding:1em; background-color:white;" class="container-fluid clearfix space-above hide">
+            <div id="port03" style="border: 4px solid #51424E;border-radius: 5px; padding:1em; background-color:white;" class="container-fluid clearfix portpage space-above hide">
                 <img class="col-md-6 float-md-end mb-3 ms-md-3" style="border: 4px solid #51424E; border-radius: 5px;" src="..." alt="..." />
                 <h3 class="space-above">Whitney's Wings Redesign</h3>
                 <p>My client was a pageant contestant that wanted a website for her charity foundation.</p>
@@ -301,11 +311,11 @@
 
             <div id="portfolio-container" class="container-fluid space-above">
                 <ul class="nav">
-                    <li class="nav-item">
+                    <li class="nav-item nav-menu">
                         <button onclick="changeTab(event, 'work-experience')" class="nav-link neutral shipporimincho-bold navbtn active"><h3>Work Experience</h3></button>
                     </li>
                     <li class="nav-border" style="border-right: 2px solid #51424E;"></li>
-                    <li class="nav-item">
+                    <li class="nav-item nav-menu">
                         <button onclick="changeTab(event, 'personal-projects')" class="nav-link neutral shipporimincho-bold navbtn"><h3>Personal Projects</h3></button>
                     </li>
                 </ul>
