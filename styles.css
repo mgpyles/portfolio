@@ -120,8 +120,8 @@ a{
     border-radius: 5px;
 }
 
-.btn-portfolio:active{
-    background-color:#51424E !important;
+.btn-portfolio:focus{
+    background-color:#51424E;
 }
 
 .btn-form {
