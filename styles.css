@@ -72,6 +72,10 @@ a{
 .space-above{
     margin-top:1.5em;
 }
+.space-left{
+    margin-left:.2em;
+
+}
 .neutral {
     color: #51424E;
 }
@@ -120,7 +124,7 @@ a{
     border-radius: 5px;
 }
 
-.btn-portfolio:focus{
+.btn-portfolio:active{
     background-color:#51424E;
 }
 
@@ -177,4 +181,13 @@ a{
 .tabcontent {
     display:none;
     padding: 1em;
+}
+
+.pill {
+    font-size:small;
+    border-radius: 100px;
+    background-color: #51424E;
+    color:white;
+    width:max-content;
+    margin-right:.5em;
 }
