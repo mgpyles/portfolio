@@ -115,8 +115,9 @@
                 width:75%;
                 margin:auto;
             }
+
             #nav{
-                width:87%;
+                left:59%;
             }
         }
 
@@ -217,6 +218,17 @@
 
         .card-text{
             margin-top:.05em;
+        }
+
+        #nav {
+            width: max-content;
+            right:1%;
+        }
+
+        #work-tab{
+            width:max-content;
+            left:inherit;
+            z-index:5;
         }
         
     </style>
@@ -319,7 +331,7 @@
             
 
             <div id="portfolio-container" class="container-fluid space-above">
-                <ul class="nav">
+                <ul id="work-tab" class="nav">
                     <li class="nav-item nav-menu">
                         <button onclick="changeTab(event, 'work-experience')" class="nav-link neutral shipporimincho-bold navbtn active"><span>Work Experience</span></button>
                     </li>
@@ -672,16 +684,40 @@
     <script type="text/javascript">
         var currentPage, currentPortfolioPage;
         var currentTab = 'work-experience';
-        const mediaQuery = window.matchMedia('(max-width: 768px)');
+        const mobile = window.matchMedia('(max-width: 768px)');
+        const widescreen = window.matchMedia('(min-width: 2560px)');
 
-        mediaQuery.addEventListener('change', (event) => {
+        mobile.addEventListener('change', (event) => {
             if (event.matches) {
                 // Actions when the media query becomes true
                 document.getElementById("nav").style.position = 'inherit';
                 document.getElementById("nav").style.top = '';
-            } else if (currentPage == "work-page") {
+                document.getElementById("nav").style.width = '100%';
+            } else if (currentPage == "work-page" && !event.matches) {
                 document.getElementById("nav").style.position = 'absolute';
                 document.getElementById("nav").style.top = '8.5em';
+                document.getElementById("nav").style.width = 'max-content';
+            } else if (currentPortfolioPage.classList.contains("portpage")) {
+                document.getElementById("nav").style.position = 'absolute';
+                document.getElementById("nav").style.top = '4.5em';
+                document.getElementById("nav").style.width = 'max-content';
+            }
+        });
+
+        widescreen.addEventListener('change', (event) => {
+            if (event.matches) {
+                // Actions when the media query becomes true
+                document.getElementById("nav").style.position = 'inherit';
+                document.getElementById("nav").style.top = '';
+                document.getElementById("nav").style.width = '100%';
+            } else if (currentPage == "work-page" && !event.matches) {
+                document.getElementById("nav").style.position = 'absolute';
+                document.getElementById("nav").style.top = '8.5em';
+                document.getElementById("nav").style.width = 'max-content';
+            } else if (currentPortfolioPage.classList.contains("portpage")) {
+                document.getElementById("nav").style.position = 'absolute';
+                document.getElementById("nav").style.top = '4.5em';
+                document.getElementById("nav").style.width = 'max-content';
             }
         });
 
@@ -690,12 +726,14 @@
             document.getElementById("nav").classList.toggle("hide");
             document.getElementById("main-footer").classList.toggle("hide");
             document.getElementById(goToPage).classList.toggle("hide");
-            if (goToPage == "work-page" && !mediaQuery.matches) {
+            if (goToPage == "work-page" && !mobile.matches) {
                 document.getElementById("nav").style.position = 'absolute';
                 document.getElementById("nav").style.top = '8.5em';
+                document.getElementById("nav").style.width = 'max-content';
             } else {
                 document.getElementById("nav").style.position = 'inherit';
                 document.getElementById("nav").style.top = '';
+                document.getElementById("nav").style.width = '100%';
             }
             currentPage = goToPage;
         }
@@ -706,18 +744,23 @@
                 document.getElementById("portfolio-container").classList.toggle("hide");
                 document.getElementById(currentPortfolioPage).classList.toggle("hide");
             }
-            if (goToPage == "work-page" && !mediaQuery.matches) {
+            if (goToPage == "work-page" && !mobile.matches && !widescreen.matches) {
                 document.getElementById("nav").style.position = 'absolute';
                 document.getElementById("nav").style.top = '8.5em';
+                document.getElementById("nav").style.width = 'max-content';
             } else {
                 document.getElementById("nav").style.position = 'inherit';
                 document.getElementById("nav").style.top = '';
+                document.getElementById("nav").style.width = '100%';
             }
             document.getElementById(goToPage).classList.toggle("hide");
             currentPage = goToPage;
         }
 
         function loadPortfolio(goToPort) {
+            document.getElementById("nav").style.position = 'absolute';
+            document.getElementById("nav").style.top = '4.5em';
+            document.getElementById("nav").style.width = 'max-width';
             document.getElementById("portfolio-container").classList.toggle("hide");
             document.getElementById(goToPort).classList.toggle("hide");
             currentPortfolioPage = goToPort;
